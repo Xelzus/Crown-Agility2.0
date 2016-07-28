@@ -10,6 +10,16 @@ app.factory('deadlineSvc', function ($http) {
                   'Accept' : 'application/json'
                 }
             });
+        },
+
+        createReminder: function(reminder) {
+            return $http.post('deadlines/createDeadlineReminder', reminder, {
+              headers:
+              {
+                  'Content-Type' : 'application/json; charset=utf-8',
+                  'Accept' : 'application/json'
+              }
+            });
         }
     }
 });

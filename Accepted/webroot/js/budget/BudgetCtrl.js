@@ -3,7 +3,6 @@ app.config(function ($compileProvider) {
 });
 
 app.controller("budgetCtrl", function ($scope) {
-    //Data to be used on the web page using the controller
     $scope.model = {
         title: "",
         tentativeAmount: "",
@@ -39,7 +38,7 @@ app.controller("budgetCtrl", function ($scope) {
         $scope.model.spendItems.push({ name: "", value: "" });
     };
 
-    $scope.downloadBudget = function() {
+    $scope.createBudgetText = function() {
         var summary = {
             title: $scope.model.title,
             total: $scope.model.totalAmount,
@@ -73,8 +72,10 @@ app.controller("budgetCtrl", function ($scope) {
         $scope.model.downloadLink = textFile;
 
         $scope.model.showDownload = true;
+    };
 
-        debugger;
+    $scope.downloadBudget = function() {
+        $scope.model.showDownload = false;
     };
 
     //Functions

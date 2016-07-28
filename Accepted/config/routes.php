@@ -56,14 +56,14 @@ Router::scope('/', function (RouteBuilder $routes) {
 
     $routes->connect('/budget', ['controller' => 'Pages', 'action' => 'display', 'budget']);
 
-    $routes->connect('/profiles/:id', ['controller' => 'Profiles', 'action' => 'index'], ['pass' => ['id'], 'id' => '[0-9]+']);
-
-    $routes->connect('/deadlines/getDeadlines/:state', ['controller' => 'Deadlines', 'action' => 'getDeadlines'], ['pass' => ['state'], 'state' => '[a-z]+']);
-
     /**
      * ...and connect the rest of 'Pages' controller's URLs.
      */
     $routes->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
+
+    $routes->connect('/profiles/:id', ['controller' => 'Profiles', 'action' => 'index'], ['pass' => ['id'], 'id' => '[0-9]+']);
+
+    $routes->connect('/deadlines/getDeadlines/:state', ['controller' => 'Deadlines', 'action' => 'getDeadlines'], ['pass' => ['state'], 'state' => '[a-z]+']);
 
     /**
      * Connect catchall routes for all controllers.

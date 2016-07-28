@@ -29,7 +29,7 @@ app.controller("profileCtrl", function ($scope, $filter, $http, profileSvc) {
         profileSvc.addReminder({
             title: $scope.model.newReminder.title ,
             description: $scope.model.newReminder.description,
-            remindOn: $filter('date')($scope.model.newReminder.remindOn, "MM/dd/yyyy hh:mm a")
+            remindOn: $filter('date')($scope.model.newReminder.remindOn, "MM/dd/yyyy")
         })
         .success(function(data) {
             if(data.result)
@@ -75,7 +75,6 @@ app.controller("profileCtrl", function ($scope, $filter, $http, profileSvc) {
             }
 
             $scope.model.posts = data.posts;
-            debugger;
         });
     };
 
