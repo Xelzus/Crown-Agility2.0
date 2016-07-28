@@ -26,9 +26,9 @@ $description = 'Forward';
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	   <?= $this->Html->meta('icon') . "\n" ?>
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-	  <?= $this->Html->css('landing.css') . "\n" ?>
+	  <?= $this->Html->css('site.css') . "\n" ?>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -44,7 +44,11 @@ $description = 'Forward';
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                </button> <a class="navbar-brand" href="/Crown-Agility2.0/Accepted/users/login"> <?= $this->Html->image('crownAgilityLogoTransparent.png', array('alt' => 'CA', 'height' => '25', 'width' => '25')) ?> </a> </div>
+                </button>
+                <a class="navbar-brand" href="/Crown-Agility2.0/Accepted/users/login">
+                    <?= $this->Html->image('crownAgilityLogoTransparent.png', array('alt' => 'CA', 'height' => '25', 'width' => '25')) ?>
+                </a>
+            </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
                     <li> <?= $this->Html->link(__('Profile'),'/profiles/' . $id)?> </li>
