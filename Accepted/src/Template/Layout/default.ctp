@@ -51,15 +51,22 @@ $description = 'Forward';
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li> <?= $this->Html->link(__('Profile'),'/profiles/' . $id)?> </li>
                     <li> <?= $this->Html->link(__('Resume Templates'),'/templates')?> </li>
                     <li> <?= $this->Html->link(__('Aplication Deadlines'),'/deadlines')?> </li>
-                    <li> <a href="#">Useful Tips</a> </li>
+                    <li> <?= $this->Html->link(__('Useful Tips'),'/tips')?> </li>
 					<li> <?= $this->Html->link(__('Forums'),'/forums')?></li>
                     <li> <a href="#">Budget Manager</a> </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><?= $this->Html->link(__('Sign-out <i class="fa fa-sign-out"></i>'),'/users/logout', ['escape' => false])?></li>
+                    <li>
+                        <div class="btn-group navbar-btn">
+                            <button data-toggle="dropdown" class="btn glyphicon glyphicon-cog dropdown-toggle"></button>
+                            <ul class="dropdown-menu">
+                                <li> <?= $this->Html->link(__('My Profile'),'/profiles/' . $id)?> </li>
+                                <li><?= $this->Html->link(__('Sign-out <i class="fa fa-sign-out"></i>'),'/users/logout', ['escape' => false])?></li>
+                            </ul>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
