@@ -40,7 +40,11 @@ $description = 'Forward';
     <nav class="navbar navbar-inverse navbar-static-top">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand" href="#"> Logo </a> </div>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button> <a class="navbar-brand" href="/Crown-Agility2.0/Accepted/users/login"> <?= $this->Html->image('crownAgilityLogoTransparent.png', array('alt' => 'CA', 'height' => '25', 'width' => '25')) ?> </a> </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
                     <li> <?= $this->Html->link(__('Profile'),'/profiles/' . $id)?> </li>
@@ -48,9 +52,10 @@ $description = 'Forward';
                     <li> <?= $this->Html->link(__('Aplication Deadlines'),'/deadlines')?> </li>
                     <li> <a href="#">Useful Tips</a> </li>
 					<li> <?= $this->Html->link(__('Forums'),'/forums')?></li>
+                    <li> <a href="#">Budget Manager</a> </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><?= $this->Html->link(__('Sign-out'),'/users/logout')?></li>
+                    <li><?= $this->Html->link(__('Sign-out <i class="fa fa-sign-out"></i>'),'/users/logout', ['escape' => false])?></li>
                 </ul>
             </div>
         </div>
