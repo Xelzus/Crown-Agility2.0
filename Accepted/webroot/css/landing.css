@@ -1,0 +1,155 @@
+body {
+    background-image: url(../img/wood.jpg);
+}
+
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+
+.row.content {
+    height: 450px
+}
+
+
+/* Set gray background color and 100% height */
+
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+
+@media screen and (max-width: 767px) {
+    .sidenav {
+        height: 500px;
+        padding: 15px;
+    }
+    .row.content {
+        height: auto;
+    }
+}
+
+h1,
+h3,
+p {
+    color: white;
+}
+
+p1{
+    color: white;
+}
+
+h2{
+    color: white;
+    text-shadow: 1px 0 2px;
+}
+
+h4{
+    color: white;
+    text-shadow: 0 0 3px #FF0000;
+}
+
+a:link, a:visited: {
+    background-color: white;
+    color: black;
+    padding: 14px 25px;
+    text-align:center;
+    display: inline-flex;
+}
+
+a:hover, a:actuve{
+    background-color: white;
+}
+/* everything from here down is for the resume templates*/
+
+img.align-right	{
+
+                width: 20px;
+				height: 20px;}
+
+#rcorners2 {
+    border-radius: 35px;
+    border: 4px solid cadetblue;
+    padding: 20px;
+    background-color: tan;
+}
+
+#rcorners3 {
+    border-radius: 35px;
+    border: 6px solid cadetblue;
+    padding: 20px;
+    margin-left: 100px;
+    background-color: tan;
+}
+#titles {
+    color: cadetblue;
+    font-weight: 400;
+    text-align: left;
+    font-size: 33px;
+    font-family: fantasy;
+    margin-left: 90px;
+    text-shadow: 1px 0 2px black;
+}
+
+#title2{
+    color: cadetblue;
+    font-weight: 400;
+    text-align: center;
+    font-size: 33px;
+    font-family: fantasy;
+    text-shadow: 1px 0 2px black;
+}
+
+#bullet{
+    color: black;
+    font-size: 21px;
+    font-family: fantasy;
+    text-align: left;
+    margin-left: 20px;
+
+}
+
+#insidebullets
+{
+    color: black;
+    font-size: 18px;
+    text-align: left;
+    font-family: sans-serif;
+    margin-left: 40px;
+
+}
+#text{
+    color: black;
+    font-size: 18px;
+    text-align: left;
+    font-family: sans-serif;
+}
+h4{
+    color: white;
+    text-shadow: 0 0 3px #FF0000;
+}
+
+img.align-left {
+                width: 250px;
+				height: 300px;
+                margin-right: center;
+                margin-top: 110px;
+
+}
+
+img.align-left1 {
+                width: 180px;
+				height: 300px;
+                margin-left: 180px;
+                margin-top: 25px;
+
+}
+
+img.align-right {
+                width: 210px;
+				height: 180px;
+                margin-right: 10px;
+                margin-top: 310px
+
+}
