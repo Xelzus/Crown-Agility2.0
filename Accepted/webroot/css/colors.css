@@ -1,0 +1,63 @@
+body 
+{
+    background-image: url(../img/wood.jpg);
+}
+
+.navbar 
+{
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+
+.row.content 
+{
+    height: 450px
+}
+
+
+/* Set gray background color and 100% height */
+
+.sidenav 
+
+    padding-top: 20px;
+    background-color: #f1f1f1;
+    height: 200%;
+}
+
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+
+@media screen and (max-width: 767px) 
+{
+    .sidenav 
+	{
+        height: 500px;
+        padding: 15px;
+    }
+    .row.content 
+	{
+        height: auto;
+    }
+}
+
+#logo 
+{
+    width: 100%;
+    height: auto;
+}
+
+#h1, #h3, #h4, #p 
+{
+    color: white;
+}
+
+#student 
+{
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    /*  max-height: 100%;*/
+}
