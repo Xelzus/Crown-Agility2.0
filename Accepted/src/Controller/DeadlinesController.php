@@ -14,6 +14,7 @@ class DeadlinesController extends AppController
     public function initialize()
     {
         parent::initialize();
+        $this->loadModel('Reminders');
     }
 
 	public function beforeFilter(Event $event) {
@@ -64,5 +65,24 @@ class DeadlinesController extends AppController
 
         $this->set('collegeData', $collegeData);
         $this->set('_serialize', ['collegeData']);
+    }
+
+    public function createDeadlineReminder()
+    {
+        $result = false;
+
+        if ($this->request->is('post'))
+        {
+            $reminder = $this->Reminders->newEntity();
+
+            $this->request->data['user_id'] = $this->Auth->user('id');
+
+            $reminder = $this->Reminders->patchEntity($reminder, $this->request->data);
+            $reminder['remindOn'] = $this->request->data['remindOn'];
+            $result = $this->Reminders->save($reminder);
+        }
+
+        $this->set('result', $result);
+        $this->set('_serialize', ['result']);
     }
 }
