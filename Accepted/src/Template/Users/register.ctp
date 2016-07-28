@@ -47,38 +47,40 @@ $title = 'Forward';
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12">
-                <h1 id="h1" class="text-center">Register</h1>
+                <h1 id="titles" class="text-center">Register</h1>
             </div>
         </div>
     </div>
-    <div class="container-fluid text-center">
-        <div class="row content">
-            <div class="col-sm-6">
+           <div id= rcorners3 class="col-sm-4">
                 <div class="col-xs-9">
-                    <h3 id="h3" class="text-left">Sign-up</h3>
+                    <h3 id="h3" class="text-left"> <b>Sign-up</b> </h3>
                 </div>
-                <?php echo $this->Form->create('User',array('class'=>'form-horizontal','inputDefaults'=>array('label'=>false)));?>
+                <form role="form">
                     <div class="form-group">
-                      <div class="col-xs-9">
-                          <?php echo $this->Form->input('email',array('class'=>'form-control', 'Placeholder'=>'Email', 'label'=>false));?>
-                          <br>
-                      </div>
-                        <div class="col-xs-9">
-                            <?php echo $this->Form->input('username',array('class'=>'form-control', 'Placeholder'=>'Username', 'label'=>false));?>
+                        <div class="col-xs-11">
+                            <input type="email" class="form-control" placeholder="Email">
                             <br>
                         </div>
-                        <div class="col-xs-9">
-                            <?php echo $this->Form->input('password',array('class'=>'form-control', 'Placeholder'=>'Password', 'label'=>false));?>
+                        <div class="col-xs-11">
+                            <input class="form-control" placeholder="Username">
                             <br>
                         </div>
-                        <div class="col-xs-9">
-                            <?php echo $this->Form->submit('Login',array('class'=>'btn btn-primary'))?>
+                        <div class="col-xs-11">
+                            <input type="password" class="form-control" placeholder="Password">
+                            <br>
                         </div>
+                        <div class="col-xs-11">
+                            <input type="password" class="form-control" placeholder="Confirm Password">
+                            <br>
+                        </div>
+                        <div class="col-xs-11">
+                            <button type="submit" class="btn btn-primary"> Sign up </button>
+                            <br>
+                        </div>
+
                     </div>
-                <?php echo $this->Form->end();?>
+                </form>
             </div>
-        </div>
-	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>

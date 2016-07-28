@@ -47,7 +47,7 @@ $title = 'Forward';
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12">
-                <h1 id="h1" class="text-center">Welcome! <br><small>Please log in or sign up to continue</small> </h1>
+                <h1 id="h1" class="text-center">Welcome to Forward! </h1>
 
                   <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width:50%; margin:0 auto; float:center;">
                         <!-- Indicators -->
@@ -79,17 +79,19 @@ $title = 'Forward';
                 </div>
                 <br>
                 <br>
-                <p id="p" class="text-center">Forward is a website for students made by students to help a successful transition from highschool to college. Login or create an account</p>
-                <hr>
+               <p id="p" class="text-center">Forward is a website for students made by students to help a successful transition from highschool to college.</p>
+                <hr id= "linea">
             </div>
         </div>
     </div>
     <div class="container-fluid text-center">
+        <p id = "p1" class="text-center">Login or Create an Account</p>
         <div class="row content">
-            <div class="col-sm-6">
-                <div class="col-xs-9">
+            <div id = rcorners2 class="col-sm-4">
+                <div class="col-xs-15">
+                    
                     <h3 id="h3" class="text-left">Log-in</h3>
-                </div>
+                
                 <?php echo $this->Form->create('User',array('class'=>'form-horizontal','inputDefaults'=>array('label'=>false)));?>
                     <div class="form-group">
                         <div class="col-xs-9">
@@ -105,41 +107,13 @@ $title = 'Forward';
                         </div>
                     </div>
                 <?php echo $this->Form->end();?>
-            </div>
-            <div class="col-sm-6">
-                <div class="col-xs-9">
-                    <h3 id="h3" class="text-left"> Sign-up </h3>
                 </div>
-                <form role="form">
-                    <div class="form-group">
-                        <div class="col-xs-9">
-                            <input type="email" class="form-control" placeholder="Email">
-                            <br>
-                        </div>
-                        <div class="col-xs-9">
-                            <input class="form-control" placeholder="Username">
-                            <br>
-                        </div>
-                        <div class="col-xs-9">
-                            <input type="password" class="form-control" placeholder="Password">
-                            <br>
-                        </div>
-                        <div class="col-xs-9">
-                            <input type="password" class="form-control" placeholder="Confirm Password">
-                            <br>
-                        </div>
-                        <div class="col-xs-9">
-                            <button type="submit" class="btn btn-primary"> Sign up </button>
-                            <br>
-                        </div>
-
-                    </div>
-                </form>
             </div>
-            <a class="btn btn-primary" href="users/register">Register</a>
+     
+            
         </div>
 	</div>
-
+    <a class="btn btn-primary" href="users/register">Register</a>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
