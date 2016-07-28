@@ -54,6 +54,8 @@ Router::scope('/', function (RouteBuilder $routes) {
 
     $routes->connect('/tips', ['controller' => 'Pages', 'action' => 'display', 'tips']);
 
+    $routes->connect('/budget', ['controller' => 'Pages', 'action' => 'display', 'budget']);
+
     $routes->connect('/profiles/:id', ['controller' => 'Profiles', 'action' => 'index'], ['pass' => ['id'], 'id' => '[0-9]+']);
 
     $routes->connect('/deadlines/getDeadlines/:state', ['controller' => 'Deadlines', 'action' => 'getDeadlines'], ['pass' => ['state'], 'state' => '[a-z]+']);

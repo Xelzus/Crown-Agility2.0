@@ -55,7 +55,7 @@ $description = 'Forward';
                     <li> <?= $this->Html->link(__('Aplication Deadlines'),'/deadlines')?> </li>
                     <li> <?= $this->Html->link(__('Useful Tips'),'/tips')?> </li>
 					<li> <?= $this->Html->link(__('Forums'),'/forums')?></li>
-                    <li> <a href="#">Budget Manager</a> </li>
+                    <li> <?= $this->Html->link(__('Budget Manager'),'/budget')?> </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
