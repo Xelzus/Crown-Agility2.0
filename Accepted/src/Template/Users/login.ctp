@@ -47,9 +47,37 @@ $title = 'Forward';
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12">
-                <h1 id="h1" class="text-center">Welcome! <small>Please log in or sign up to continue</small> </h1>
+                <h1 id="h1" class="text-center">Welcome! <br><small>Please log in or sign up to continue</small> </h1>
 
-                <img class='img-circle img-responsive' id="student" src="img/student.jpg">
+                  <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width:50%; margin:0 auto; float:center;">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                            <li data-target="#myCarousel" data-slide-to="3"></li>
+                        </ol>
+                        
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img style=" width: auto; height: 300px; max-height: 300px; margin:0 auto;"class='img-circle img-responsive'src="img/student.jpg" alt="student">
+                            </div>
+                            
+                            <div class="item">
+                                <img style=" width: auto; height: 300px; max-height: 300px; margin:0 auto;" class='img-circle img-responsive'src="img/student2.jpg" alt="student">
+                            </div>
+                            
+                            <div class="item">
+                                <img style=" width: auto; height: 300px; max-height: 300px; margin:0 auto;" class='img-circle img-responsive' src="img/student3.jpg" alt="student">
+                            </div>
+                            
+                            <div class="item">
+                                <img style=" width: auto; height: 300px; max-height: 300px; margin:0 auto;" class='img-circle img-responsive'  src="img/student4.jpg" alt="student">
+                            </div>
+                        </div>
+                </div>
+                <br>
                 <br>
                 <p id="p" class="text-center">Forward is a website for students made by students to help a successful transition from highschool to college. Login or create an account</p>
                 <hr>
