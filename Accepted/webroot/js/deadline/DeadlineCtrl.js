@@ -26,7 +26,8 @@ app.controller("deadlineCtrl", function ($scope, $filter, deadlineSvc) {
         deadlineSvc.createReminder({
             title: data.college + " Deadline",
             description: "The last day for applications for " + data.college + " is " + data.deadline,
-            remindOn: deadline
+            remindOn: deadline,
+            isActive: 1
         })
         .success(function(data) {
             if(data.result)
