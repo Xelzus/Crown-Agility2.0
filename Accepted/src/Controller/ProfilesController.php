@@ -17,6 +17,8 @@ class ProfilesController extends AppController
 	    $this->loadModel('Users');
         $this->loadModel('Reminders');
         $this->loadModel('Posts');
+        $this->loadModel('Topics');
+        $this->loadModel('Forums');
     }
 
 	public function beforeFilter(Event $event) {
@@ -51,9 +53,27 @@ class ProfilesController extends AppController
 
     public function getLatestPosts()
     {
-        $user = $this->Users->get($this->Auth->user('id'), ['contain' => ['Posts' => ['Users','Topics', 'Forums', 'sort' => ['Posts.created' => 'DESC']]]]);
+        $posts = $this->Posts->find('all', [
+            'contain' => ['Users', 'Topics', 'Forums'],
+            'conditions' => [
+                'Posts.user_id' => $this->Auth->user('id')],
+            'order' => [
+                'Posts.created' => 'DESC'],
+            'limit' => 5
+                ]);
 
-        $posts = $user['posts'];
+        $posts = $posts->toArray();
+
+        /*$user = $this->Users->get($this->Auth->user('id'), [
+            'contain' => [
+                'Posts' => [
+                    'Users',
+                    'Topics',
+                    'Forums',
+                    'sort' => [
+                        'Posts.created' => 'DESC'
+                    ]
+                    ]]]);*/
 
         $this->set('posts', $posts);
         $this->set('_serialize', ['posts']);
@@ -62,7 +82,14 @@ class ProfilesController extends AppController
     public function getReminders()
     {
 
-        $user = $this->Users->get($this->Auth->user('id'), ['contain' => ['Reminders' => ['sort' => ['Reminders.created' => 'DESC']]]]);
+        $user = $this->Users->get($this->Auth->user('id'), [
+            'contain' => [
+                'Reminders' => [
+                    'sort' => [
+                        'Reminders.created' => 'DESC'],
+                    'conditions' => [
+                        'Reminders.isActive' => true
+                        ]]]]);
 
         $reminders = $user['reminders'];
 
@@ -98,21 +125,21 @@ class ProfilesController extends AppController
         $this->set('_serialize', ['result']);
     }
 
-    /*public function deleteReminder()
+    public function deleteReminder()
     {
         $result = false;
 
         if ($this->request->is('post'))
         {
-            $reminder = $this->Reminders->newEntity();
-
-            $this->request->data['user_id'] = $this->Auth->user('id');
-
-            $reminder = $this->Reminders->patchEntity($reminder, $this->request->data);
-            $result = $this->Reminders->delete($reminder);
+            $reminder = $this->Reminders->get($this->request->data['id']);
+            $reminder['isActive'] = false;
+            if($this->Reminders->save($reminder))
+            {
+                $result = true;
+            }
         }
 
         $this->set('result', $result);
         $this->set('_serialize', ['result']);
-    }*/
+    }
 }

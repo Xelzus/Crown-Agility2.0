@@ -17,6 +17,8 @@ app.controller("profileCtrl", function ($scope, $filter, $http, profileSvc) {
     $scope.loadReminders = function() {
         profileSvc.loadReminders()
         .success(function(data) {
+            $scope.model.reminders = [];
+
             $scope.model.reminders = data.reminders;
         });
     };
@@ -29,7 +31,8 @@ app.controller("profileCtrl", function ($scope, $filter, $http, profileSvc) {
         profileSvc.addReminder({
             title: $scope.model.newReminder.title ,
             description: $scope.model.newReminder.description,
-            remindOn: $filter('date')($scope.model.newReminder.remindOn, "MM/dd/yyyy")
+            remindOn: $filter('date')($scope.model.newReminder.remindOn, "MM/dd/yyyy"),
+            isActive: 1
         })
         .success(function(data) {
             if(data.result)
@@ -37,43 +40,23 @@ app.controller("profileCtrl", function ($scope, $filter, $http, profileSvc) {
                 $scope.updateReminders();
             }
         });
-
-        //$scope.model.reminders.push({
-        //    title: $scope.model.newReminder.title ,
-        //    description: $scope.model.newReminder.description,
-        //    remindOn: $filter('date')($scope.model.newReminder.remindOn, "MM/dd/yyyy hh:mm a")
-        //});
-
-        //$scope.model.newReminder.title = "";
-        //$scope.model.newReminder.description = "";
-        //$scope.model.newReminder.remindOn = "";
-
-        //$scope.updateReminders();
     };
 
-    $scope.deleteReminder = function(selected/*selectedId*/) {
-        var index = $scope.model.reminders.indexOf(selected);
-        $scope.model.reminders.splice(index, 1);
-
-        /*profileSvc.deleteReminder({
-            id: selectedId
+    $scope.deleteReminder = function(selected) {
+        profileSvc.deleteReminder({
+            id: selected.id
         })
         .success(function(data) {
             if(data.result)
             {
                 $scope.updateReminders();
             }
-        });*/
+        });
     };
 
     $scope.loadPosts = function() {
         profileSvc.loadPosts()
         .success(function(data) {
-            if(data.posts.length > 5)
-            {
-                data.posts.splice(4, data.posts.length - 5);
-            }
-
             $scope.model.posts = data.posts;
         });
     };
