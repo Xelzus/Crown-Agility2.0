@@ -66,7 +66,7 @@
                             ?>
                         </p>
                         <?php $hash = md5($post['user']['email']);?>
-                        <img height="100" width="100" src="../../webroot/img/crownAgilityLogo.png" >
+                        <?= $this->Html->image('crownAgilityLogo.png', ['height' => '100', 'width' => '100']) ?>
                     </td>
                     <td>
                         <p>

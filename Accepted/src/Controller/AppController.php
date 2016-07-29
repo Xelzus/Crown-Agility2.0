@@ -66,8 +66,10 @@ class AppController extends Controller
     public function beforeRender(Event $event)
     {
         $id = $this->Auth->user('id');
+        $username = $this->Auth->user('username');
 
         $this->set('id', $id);
+        $this->set('username', $username);
 
         if (!array_key_exists('_serialize', $this->viewVars) &&
             in_array($this->response->type(), ['application/json', 'application/xml'])

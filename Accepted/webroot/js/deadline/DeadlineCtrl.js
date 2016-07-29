@@ -32,7 +32,7 @@ app.controller("deadlineCtrl", function ($scope, $filter, deadlineSvc) {
         .success(function(data) {
             if(data.result)
             {
-                alert("Added deadline to your reminders. Expect a reminder 5 days before the deadline.'");
+                alert("Added deadline to your reminders. Expect a reminder 5 days before the deadline.");
             }
         });
     };

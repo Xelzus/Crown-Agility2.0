@@ -51,29 +51,18 @@ class ProfilesController extends AppController
         $this->set('_serialize', ['user', 'owner', 'isOwner']);
     }
 
-    public function getLatestPosts()
+    public function getLatestPosts($id  = null)
     {
         $posts = $this->Posts->find('all', [
             'contain' => ['Users', 'Topics', 'Forums'],
             'conditions' => [
-                'Posts.user_id' => $this->Auth->user('id')],
+                'Posts.user_id' => $id],
             'order' => [
                 'Posts.created' => 'DESC'],
             'limit' => 5
                 ]);
 
         $posts = $posts->toArray();
-
-        /*$user = $this->Users->get($this->Auth->user('id'), [
-            'contain' => [
-                'Posts' => [
-                    'Users',
-                    'Topics',
-                    'Forums',
-                    'sort' => [
-                        'Posts.created' => 'DESC'
-                    ]
-                    ]]]);*/
 
         $this->set('posts', $posts);
         $this->set('_serialize', ['posts']);

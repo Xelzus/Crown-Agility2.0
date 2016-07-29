@@ -9,12 +9,17 @@
 	<div class="row">
 		<div ng-class=<?= '"' . h($isOwner) . ' ? \'col-xs-4\' : \'col-xs-12\'"'  ?>>
 			<div class="well">
-				<p style="color: #000">Name: Chris Talavera</p>
-				<p style="color: #000">School: Florida Atlantic University</p>
-				<p style="color: #000">About Me: Demesne far hearted suppose venture excited see had has. Dependent on so extremely delivered by. Yet ﻿no jokes worse her why. Bed one supposing breakfast day fulfilled off depending questions. Whatever boy her exertion his extended. Ecstatic followed handsome drawings entirely mrs one yet outweigh. Of acceptance insipidity remarkably is invitation. </p>
+				<?= $this->Html->image('crownAgilityLogo.png', ['height' => '150', 'width' => '150']) ?>
+				<br>
+				<br>
+				<p style="color: #000"><b>Name:</b> Chris Talavera</p>
+				<p style="color: #000"><b>School:</b> Florida Atlantic University</p>
+				<p style="color: #000"><b>About Me:</b> Demesne far hearted suppose venture excited see had has. Dependent on so extremely delivered by. Yet ﻿no jokes worse her why. Bed one supposing breakfast day fulfilled off depending questions. Whatever boy her exertion his extended. Ecstatic followed handsome drawings entirely mrs one yet outweigh. Of acceptance insipidity remarkably is invitation. </p>
 			</div>
 		</div>
-		<div class="col-xs-8">
+		<div ng-class=<?= '"' . h($isOwner) . ' ? \'col-xs-8\' : \'col-xs-12\'"'  ?>>
+			<h1 style="text-align: center">Reminders</h1>
+			<hr>
 			<div ng-if=<?= '"' . h($isOwner) . '"'  ?> class="text-left well">
 				<!--Reminders-->
 				<div>
@@ -67,7 +72,7 @@
 
 			<br>
 
-			<div ng-if=<?= '"' . h($isOwner) . '"'  ?>>
+			<div>
 				<h1 style="text-align: center">Latest Posts</h1>
 				<hr>
 				<div>

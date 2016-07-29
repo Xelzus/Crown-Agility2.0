@@ -55,7 +55,13 @@ app.controller("profileCtrl", function ($scope, $filter, $http, profileSvc) {
     };
 
     $scope.loadPosts = function() {
-        profileSvc.loadPosts()
+        var url = window.location.href;
+
+        var tokens = url.split("/");
+
+        var ownerId = tokens[tokens.length - 1];
+
+        profileSvc.loadPosts(ownerId)
         .success(function(data) {
             $scope.model.posts = data.posts;
         });

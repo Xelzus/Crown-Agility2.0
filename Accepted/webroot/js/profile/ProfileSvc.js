@@ -32,8 +32,8 @@ app.factory('profileSvc', function ($http) {
             });
         },
 
-        loadPosts: function() {
-            return $http.get('getLatestPosts', {
+        loadPosts: function(ownerId) {
+            return $http.get('getLatestPosts/' + ownerId, {
                 headers:
                 {
                   'Content-Type' : 'application/json; charset=utf-8',
