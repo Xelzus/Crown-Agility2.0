@@ -55,7 +55,7 @@
 					</td>
 					<td><?php
 						echo $this->Html->link($topic['user']['username'],
-												array('controller'=>'users','action'=>'profiles',$topic['user']['id']));
+												array('controller'=>'profiles', 'action'=>'index', $topic['user']['id']));
 						?>
 					</td>
 					<td><?php
@@ -73,8 +73,8 @@
 						$post = $topic['posts'][0];
 						echo $this->Time->timeAgoInWords($post['created']);
 						echo '&nbsp;<small>by</small>&nbsp;';
-						echo $this->Html->link($post['user']['username'],array('controller'=>'users',
-																						'action'=>'profile',
+						echo $this->Html->link($post['user']['username'],array('controller'=>'profiles',
+																						'action'=>'index',
 																						$post['user']['id']));
 					   }
 					   ?>
