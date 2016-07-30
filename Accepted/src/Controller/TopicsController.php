@@ -14,6 +14,7 @@ class TopicsController extends AppController
     {
         parent::initialize();
     	$this->loadModel('Posts');
+        $this->loadModel('Profiles');
     }
 
 	public function beforeFilter(Event $event) {
@@ -85,7 +86,7 @@ class TopicsController extends AppController
 
 		 $this->paginate = [ 'Posts' =>
 		 array(
-		 'contain' => array('Users'),
+		 'contain' => array('Users' => ['Profiles']),
 		 'conditions' => array('Posts.topic_id'=>$topic['id']),
 		 'order' => array('Posts.id'=>'DESC'))
 		];
