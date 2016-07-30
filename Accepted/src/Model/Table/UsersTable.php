@@ -50,6 +50,9 @@ class UsersTable extends Table
         $this->hasMany('Reminders', [
             'foreignKey' => 'user_id'
         ]);
+        $this->hasOne('Profiles', [
+            'foreignKey' => 'user_id'
+        ]);
     }
 
     /**
