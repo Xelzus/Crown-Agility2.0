@@ -9,12 +9,15 @@
 	<div class="row">
 		<div ng-class=<?= '"' . h($isOwner) . ' ? \'col-xs-4\' : \'col-xs-12\'"'  ?>>
 			<div class="well">
-				<?= $this->Html->image('crownAgilityLogo.png', ['height' => '150', 'width' => '150']) ?>
+				<?= $this->Html->image('users/' . h($profile[0]->image_name) , ['height' => '150', 'width' => '150']) ?>
 				<br>
 				<br>
-				<p style="color: #000"><b>Name:</b> Chris Talavera</p>
-				<p style="color: #000"><b>School:</b> Florida Atlantic University</p>
-				<p style="color: #000"><b>About Me:</b> Demesne far hearted suppose venture excited see had has. Dependent on so extremely delivered by. Yet ﻿no jokes worse her why. Bed one supposing breakfast day fulfilled off depending questions. Whatever boy her exertion his extended. Ecstatic followed handsome drawings entirely mrs one yet outweigh. Of acceptance insipidity remarkably is invitation. </p>
+				<p style="color: #000"><b>Name:</b> <?= h($profile[0]->first_name) . ' ' . h($profile[0]->last_name) ?></p>
+				<p style="color: #000"><b>School:</b> <?= h($profile[0]->school) ?></p>
+				<p style="color: #000"><b>About Me:</b> <?= h($profile[0]->about_me) ?> </p>
+				<?= $this->Html->link('Edit Profile',
+										array('controller'=>'profiles','action'=>'edit',$owner->id),
+										array('escape'=>false, 'class'=>'btn btn-primary')); ?>
 			</div>
 		</div>
 		<div ng-class=<?= '"' . h($isOwner) . ' ? \'col-xs-8\' : \'col-xs-12\'"'  ?>>
