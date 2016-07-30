@@ -16,8 +16,8 @@
 				<p style="color: #000"><b>School:</b> <?= h($profile[0]->school) ?></p>
 				<p style="color: #000"><b>About Me:</b> <?= h($profile[0]->about_me) ?> </p>
 				<?= $this->Html->link('Edit Profile',
-										array('controller'=>'profiles','action'=>'edit',$owner->id),
-										array('escape'=>false, 'class'=>'btn btn-primary')); ?>
+										array('controller'=>'profiles','action'=>'edit', $owner->id),
+										array('escape'=>false, 'class'=>'btn btn-primary', 'ng-if'=> ($isOwner ? 'true' : 'false'))); ?>
 			</div>
 		</div>
 		<div ng-class=<?= '"' . h($isOwner) . ' ? \'col-xs-8\' : \'col-xs-12\'"'  ?>>
