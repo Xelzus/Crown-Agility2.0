@@ -47,7 +47,7 @@ $title = 'Forward';
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12">
-                <h1 id="h1" class="text-center">Welcome to Forward! </h1>
+                <h1 class="titles">Welcome to Accepted </h1>
 
                   <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width:50%; margin:0 auto; float:center;">
                         <!-- Indicators -->
@@ -79,41 +79,48 @@ $title = 'Forward';
                 </div>
                 <br>
                 <br>
-               <p id="p" class="text-center">Forward is a website for students made by students to help a successful transition from highschool to college.</p>
+               <p class ="p">Accepted is a website for students made by students to help a successful transition from highschool to college.</p>
                 <hr id= "linea">
             </div>
         </div>
     </div>
     <div class="container-fluid text-center">
-        <p id = "p1" class="text-center">Login or Create an Account</p>
+        <p class = "p1">Login or Create an Account</p>
         <div class="row content">
-            <div id = rcorners2 class="col-sm-4">
+            <div class = "center" class="col-sm-4">
                 <div class="col-xs-15">
                     
-                    <h3 id="h3" class="text-left">Log-in</h3>
+                    <h3 class= "id1" class="text-left">Log-in</h3>
                 
                 <?php echo $this->Form->create('User',array('class'=>'form-horizontal','inputDefaults'=>array('label'=>false)));?>
                     <div class="form-group">
-                        <div class="col-xs-9">
+                        <div class = "user" class="col-xs-9">
                             <?php echo $this->Form->input('username',array('class'=>'form-control', 'Placeholder'=>'Username', 'label'=>false));?>
                             <br>
                         </div>
-                        <div class="col-xs-9">
+                        <div class = "password" class="col-xs-9">
                             <?php echo $this->Form->input('password',array('class'=>'form-control', 'Placeholder'=>'Password', 'label'=>false));?>
                             <br>
                         </div>
-                        <div class="col-xs-9">
-                            <?php echo $this->Form->submit('Login',array('class'=>'btn btn-primary'))?>
+                        <div class="col-xs-6">
+                            <?php echo $this->Form->submit('Login',array('class'=>'btn btn-lg btn-primary'))?>
+                             
                         </div>
+                          <div class="col-xs-6">
+                              <a class="btn btn-lg btn-primary" href="users/register">Register</a>
+                              </div>
+                       
+           
+            
                     </div>
                 <?php echo $this->Form->end();?>
                 </div>
             </div>
-     
+        
             
         </div>
 	</div>
-    <a class="btn btn-primary" href="users/register">Register</a>
+    
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>

@@ -51,30 +51,30 @@ $title = 'Forward';
             </div>
         </div>
     </div>
-           <div id= rcorners3 class="col-sm-4">
+           <div class= "center1" class="col-sm-4">
                 <div class="col-xs-9">
-                    <h3 id="h3" class="text-left"> <b>Sign-up</b> </h3>
+                    <h3 class = "id2"> <b>Sign-up</b> </h3>
                 </div>
                 <?php echo $this->Form->create('User',array('class'=>'form-horizontal','role' => 'form', 'inputDefaults'=>array('label'=>false)));?>
                     <div class="form-group">
-                      <div class="col-xs-11">
+                      <div class = "user1" class="col-xs-9">
                           <?php echo $this->Form->input('email',array('class'=>'form-control', 'Placeholder'=>'Email', 'label'=>false));?>
                           <br>
                       </div>
-                        <div class="col-xs-11">
+                        <div class = "user1" class="col-xs-9">
                             <?php echo $this->Form->input('username',array('class'=>'form-control', 'Placeholder'=>'Username', 'label'=>false));?>
                             <br>
                         </div>
-                        <div class="col-xs-11">
+                        <div class = "user1" class="col-xs-9">
                             <?php echo $this->Form->input('password',array('class'=>'form-control', 'Placeholder'=>'Password', 'label'=>false));?>
                             <br>
                         </div>
-                        <div class="col-xs-11">
+                        <div class = "user1" class="col-xs-9">
                             <?php echo $this->Form->input('password',array('class'=>'form-control', 'Placeholder'=>'Confirm Password', 'label'=>false));?>
                             <br>
                         </div>
                         <div class="col-xs-11">
-                            <?php echo $this->Form->submit('Login',array('class'=>'btn btn-primary'))?>
+                            <?php echo $this->Form->submit('Sign Up',array('class'=>'btn btn-lg btn-primary'))?>
                         </div>
                     </div>
                 <?php echo $this->Form->end();?>
