@@ -1,8 +1,8 @@
 <br>
-
+<?= $this->Html->css('site.css') . "\n" ?>
 <div class="row">
 	<div class="col-lg-12 ">
-		<table class="table table-bordered">
+		<table class="table1 table-bordered1">
 			<thead>
 				<tr>
 					<th colspan=2>Forum</th>

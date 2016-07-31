@@ -1,6 +1,6 @@
 body 
 {
-    background-image: url(../img/wood.jpg);
+    background-image: url(../img/wood3.jpg)    ;
 }
 
 .navbar 
@@ -12,6 +12,88 @@ body
 
 /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
 
+.user{
+    margin-top: 1px;
+    margin: auto;
+    text-align: center;
+    width: 400px;
+}
+
+.user1{
+    margin: -2%;
+    margin-left: 60px;   
+    text-align: left;
+    width: 350px;
+    border-bottom: 2px;
+}
+
+.signup
+{
+    text-align: center;
+}
+.password{
+    margin-top: 1px;
+    margin: auto;
+    text-align: center;
+    width: 400px;
+}
+
+.center{
+    margin: auto;
+    border-radius: 20px;
+    border: 6px solid  #7F171F;
+    padding: 8px;
+    background-color:  #EFE0B9;
+    width: 500px;
+    height: 270px;
+    text-align: center;
+    
+}
+
+.register{
+    width = 300px;
+}
+.center1{
+    margin: auto;
+    border-radius: 10px;
+    border: 6px solid  #7F171F;
+    padding: 8px;
+    background-color:  #EFE0B9;
+    width: 500px;
+    height: 320px;
+    text-align: center;    
+}
+
+
+.titles {
+    color:  #7F171F ;
+    font-weight: 600;
+    text-align: left;
+    font-size: 45px;
+    font-family:serif;
+    text-shadow: 2px 1px 1px black;
+    text-align: center;
+}
+
+.p1{
+     color:  #7F171F ;
+    font-weight: 600;
+    text-align: left;
+    font-size: 30px;
+    font-family:serif;
+    text-shadow: 2px 1px 1px black;
+    text-align: center;
+    
+}
+
+.p{
+    font-size: 25px;
+    color: #FFF8DC;
+    font-family: sans-serif;
+    text-shadow: 3px 1px 1px #330000;
+    text-align: center;
+    
+}
 .row.content 
 {
     height: 450px
@@ -23,10 +105,28 @@ body
 .sidenav 
 
     padding-top: 20px;
-    background-color: #f1f1f1;
+    background-color: sss#f1f1f1;
     height: 200%;
 }
 
+.id1{
+    text-align: center;
+    color: black;
+    font-family: sans-serif;
+    font-size: 40px;
+    font-weight: bolder;
+    
+}
+
+.id2{
+    
+    color: black;
+    font-family: sans-serif;
+    font-size: 30px;
+    text-align: left;
+    margin-left: 48px;
+    
+}
 
 /* On small screens, set height to 'auto' for sidenav and grid */
 
@@ -84,13 +184,6 @@ body
     background-color: tan;
 }
 
-#rcorners2 {
-    border-radius: 35px;
-    border: 4px solid cadetblue;
-    padding: 20px;
-    background-color: tan;
-    margin-left: 525px;
-}
 
 #rcorners3 {
     border-radius: 35px;
@@ -101,31 +194,6 @@ body
 }
 
 
-#linea{
-    
-}
 
-#p{
-    font-size: 27px;
-    color: white;
-    font-family: sans-serif;
-    
-}
 
-#p1{
-    font-size: 30px;
-    color: white;
-    font-family: sans-serif;
-    text-shadow: 1px 0 4px black;
-    
-}
 
-#titles {
-    color: white;
-    font-weight: 600;
-    text-align: left;
-    font-size: 45px;
-    font-family:sans-serif;
-    text-shadow: 3px 3px 2px black;
-    margin-left: 700px;
-}
