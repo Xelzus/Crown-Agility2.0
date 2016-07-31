@@ -55,31 +55,29 @@ $title = 'Forward';
                 <div class="col-xs-9">
                     <h3 id="h3" class="text-left"> <b>Sign-up</b> </h3>
                 </div>
-                <form role="form">
+                <?php echo $this->Form->create('User',array('class'=>'form-horizontal','role' => 'form', 'inputDefaults'=>array('label'=>false)));?>
                     <div class="form-group">
+                      <div class="col-xs-11">
+                          <?php echo $this->Form->input('email',array('class'=>'form-control', 'Placeholder'=>'Email', 'label'=>false));?>
+                          <br>
+                      </div>
                         <div class="col-xs-11">
-                            <input type="email" class="form-control" placeholder="Email">
+                            <?php echo $this->Form->input('username',array('class'=>'form-control', 'Placeholder'=>'Username', 'label'=>false));?>
                             <br>
                         </div>
                         <div class="col-xs-11">
-                            <input class="form-control" placeholder="Username">
+                            <?php echo $this->Form->input('password',array('class'=>'form-control', 'Placeholder'=>'Password', 'label'=>false));?>
                             <br>
                         </div>
                         <div class="col-xs-11">
-                            <input type="password" class="form-control" placeholder="Password">
+                            <?php echo $this->Form->input('password',array('class'=>'form-control', 'Placeholder'=>'Confirm Password', 'label'=>false));?>
                             <br>
                         </div>
                         <div class="col-xs-11">
-                            <input type="password" class="form-control" placeholder="Confirm Password">
-                            <br>
+                            <?php echo $this->Form->submit('Login',array('class'=>'btn btn-primary'))?>
                         </div>
-                        <div class="col-xs-11">
-                            <button type="submit" class="btn btn-primary"> Sign up </button>
-                            <br>
-                        </div>
-
                     </div>
-                </form>
+                <?php echo $this->Form->end();?>
             </div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
