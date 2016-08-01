@@ -22,6 +22,10 @@ class UsersController extends AppController
         $this->Auth->deny('login');
     }
 
+    public function profile($id=null) {
+
+    }
+
     public function login()
     {
         if($this->Auth->user('id'))
