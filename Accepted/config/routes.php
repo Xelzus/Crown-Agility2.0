@@ -68,7 +68,7 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/profiles/getLatestPosts/:id', ['controller' => 'Profiles', 'action' => 'getLatestPosts'], ['pass' => ['id'], 'id' => '[0-9]+']);
 
     $routes->connect('/deadlines/getDeadlines/:state', ['controller' => 'Deadlines', 'action' => 'getDeadlines'], ['pass' => ['state'], 'state' => '[a-z]+']);
-
+    
     /**
      * Connect catchall routes for all controllers.
      *

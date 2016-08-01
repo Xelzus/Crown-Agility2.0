@@ -21,10 +21,6 @@ use Cake\Network\Exception\NotFoundException;
 
 $this->layout = false;
 
-if (!Configure::read('debug')):
-    throw new NotFoundException('Please replace src/Template/Pages/home.ctp with your own version.');
-endif;
-
 $title = 'Forward';
 ?>
 
@@ -42,10 +38,10 @@ $title = 'Forward';
 
 	<?= $this->Html->css('colors.css') . "\n" ?>
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    
+
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-    
-    </head> 
+
+    </head>
 <body class="home">
     <div class="container-fluid">
         <div class="row">

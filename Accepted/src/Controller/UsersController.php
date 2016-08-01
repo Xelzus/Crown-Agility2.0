@@ -57,6 +57,7 @@ class UsersController extends AppController
         $user = $this->Users->newEntity();
         $user['created'] = Time::now();
         $user['modified'] = Time::now();
+
         if ($this->request->is('post'))
         {
             $user = $this->Users->patchEntity($user, $this->request->data);
