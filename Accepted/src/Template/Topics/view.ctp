@@ -2,7 +2,7 @@
 
 <div class="row">
     <div class="col-lg-12">
-        <ol class="breadcrumb">
+        <ol class="breadcrumb alert1 alert1-info">
             <li>
                 <?php echo $this->Html->link(__('Forum'),'/Forums')?>
             </li>
@@ -44,7 +44,7 @@
 
 <div class="row">
     <div class="col-lg-12">
-        <table class="table table-bordered  ">
+        <table class="table table-bordered">
             <tbody>
                 <?php
                 foreach ($posts as $post) :
@@ -69,9 +69,9 @@
                         <?= $this->Html->image('users/' . $post['user']['profile']['image_name'] , ['height' => '100', 'width' => '100']) ?>
                     </td>
                     <td>
-                        <p>
+                        <p2>
                             <?php echo $post['content'];?>
-                        </p>
+                        </p2>
                     </td>
                     </tr>
                 <?php endforeach;?>

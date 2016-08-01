@@ -3,7 +3,7 @@
 ?>
 
 <div class="container-fluid text-center">
-    <h2>Resume Templates</h2>
+    <h1>Resume Templates</h1>
     <hr>
     <div class ="col-sm-2 text left">
 

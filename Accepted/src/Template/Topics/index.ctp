@@ -2,7 +2,7 @@
 
 <div class="row">
 	<div class="col-lg-12">
-		<ol class="breadcrumb">
+		<ol class="breadcrumb alert1 alert1-info">
 		  <li>
 			<?php echo $this->Html->link(__('Forum'),'/Forums')?>
 		  </li>
@@ -14,7 +14,7 @@
 </div>
 
 <div class="row">
-	<div class="col-lg-4">
+	<div class="col-lg-4 ">
 	  <p style="font-weight:bold;">
 		  <?php
               echo $this->Paginator->counter('Showing {{start}} - {{end}} of {{count}}');
@@ -31,10 +31,10 @@
 
 
 <div class="row">
-	<div class="col-lg-12 ">
-		<table class="table table-bordered">
+	<div class="col-lg-12 alert">
+		<table class="table1 table-bordered1">
 			<thead>
-				<tr>
+				<tr class = "sidetitle1">
 					<th colspan=2>Topic</th>
 					<th>Author</th>
 					<th>Created</th>

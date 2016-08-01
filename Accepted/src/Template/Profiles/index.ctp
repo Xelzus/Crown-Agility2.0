@@ -8,7 +8,7 @@
 
 	<div class="row">
 		<div ng-class=<?= '"' . h($isOwner) . ' ? \'col-xs-4\' : \'col-xs-12\'"'  ?>>
-			<div class="well">
+			<div class="well alert1 alert1-info">
 				<?= $this->Html->image('users/' . h($profile[0]->image_name) , ['height' => '150', 'width' => '150']) ?>
 				<br>
 				<br>
@@ -21,74 +21,75 @@
 			</div>
 		</div>
 		<div ng-class=<?= '"' . h($isOwner) . ' ? \'col-xs-8\' : \'col-xs-12\'"'  ?>>
-			<h1 style="text-align: center">Reminders</h1>
-			<hr>
-			<div ng-if=<?= '"' . h($isOwner) . '"'  ?> class="text-left well">
-				<!--Reminders-->
-				<div>
-					<div class="form-group" id="addReminderForm">
-						<label>New Reminder</label>
-						<div>
-							<input type="text" ng-model="model.newReminder.title" class="form-control" placeholder="Title">
-							<br>
-						</div>
-						<div>
-							<textarea style="resize: none" type="text" ng-model="model.newReminder.description" placeholder="Description" class="form-control" rows='1'></textarea>
-							<br>
-						</div>
-						<div>
-							<input type="text" ng-model="model.newReminder.remindOn" class="form-control" placeholder="Remind me on">
-							<br>
-						</div>
-						<div>
-							<button ng-click="addReminder()" class="btn btn-primary"> Create Reminder </button>
-							<br>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div ng-if=<?= '"' . h($isOwner) . '"'  ?>>
-				<div ng-if="model.reminders.length == 0">
-					<p>You have no reminders at this time</p>
-				</div>
-				<div class="well text-left" ng-repeat="reminder in model.reminders" ng-if="model.reminders.length > 0">
-					<div class="row">
-						<div class="col-xs-11">
-							<p style="color: #000"><strong> {{ reminder.title }} </strong></p>
-						</div>
-						<div class="col-xs-1">
-							<button type="button" ng-click="deleteReminder(reminder)" class="close">&times;</button>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-12">
-							<i> {{ reminder.remindOn | date:'MM/dd/yyyy' }} </i>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-12">
-							<p style="color: #000"> {{reminder.description }} </p>
-						</div>
-					</div>
-				</div>
-			</div>
+            <div ng-if=<?= '"' . h($isOwner) . '"'  ?>>
+                <h1 style="text-align: center">Reminders</h1>
+                <hr>
+                <div ng-if=<?= '"' . h($isOwner) . '"'  ?> class="text-left">
+                    <!--Reminders-->
+                        <div class="form-group alert2 alert2-info" id="addReminderForm">
+                            <p class = "sidetitle2">New Reminder</p>
+                            <div>
+                                <input type="text" ng-model="model.newReminder.title" class="form-control" placeholder="Title">
+                                <br>
+                            </div>
+                            <div>
+                                <textarea style="resize: none" type="text" ng-model="model.newReminder.description" placeholder="Description" class="form-control" rows='1'></textarea>
+                                <br>
+                            </div>
+                            <div>
+                                <input type="text" ng-model="model.newReminder.remindOn" class="form-control" placeholder="Remind me on">
+                                <br>
+                            </div>
+                            <div>
+                                <button ng-click="addReminder()" class="btn btn-primary"> Create Reminder </button>
+                                <br>
+                            </div>
+                        </div>
 
+                </div>
+                <div ng-if=<?= '"' . h($isOwner) . '"'  ?>>
+                    <div ng-if="model.reminders.length == 0">
+                        <p>You have no reminders at this time</p>
+                    </div>
+                    <div class="text-left alert2 alert2-info" ng-repeat="reminder in model.reminders" ng-if="model.reminders.length > 0">
+                        <div class="row">
+                            <div class="col-xs-11 sidetitle">
+                                <p class = "sidetitle2" style="color: #000"><strong> {{ reminder.title }} </strong></p>
+                            </div>
+                            <div class="col-xs-1">
+                                <button type="button" ng-click="deleteReminder(reminder)" class="close">&times;</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <i> {{ reminder.remindOn | date:'MM/dd/yyyy' }} </i>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <p style="color: #000"> {{reminder.description }} </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
 			<br>
 
-			<div>
+			<div class = "col-sm-12">
 				<h1 style="text-align: center">Latest Posts</h1>
 				<hr>
 				<div>
 					<div ng-if="model.posts.length == 0">
 						<p>You have no posts at this time</p>
 					</div>
-					<div class="well text-left" ng-repeat="post in model.posts" ng-if="model.posts.length > 0">
+					<div class="text-left alert1 alert1-info" ng-repeat="post in model.posts" ng-if="model.posts.length > 0">
 						<div class="row">
 							<div class="col-xs-7">
-								<p style="color: #000"><strong> {{ post.forum.name }} <i class="fa fa-arrow-right"></i> {{ post.topic.name }} </strong></p>
+								<p class ="sidetitle2" style="color: #000"><strong> {{ post.forum.name }} <i class="fa fa-arrow-right"></i> {{ post.topic.name }} </strong></p>
 							</div>
 							<div class="col-xs-5 text-right">
-								<p style="color: #000"><i> {{ post.created | date:'MM/dd/yyyy hh:mm a' }} <i></p>
+								<p style="color: #31708f"><i> {{ post.created | date:'MM/dd/yyyy hh:mm a' }} <i></p>
 							</div>
 						</div>
 						<div class="row">

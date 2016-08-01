@@ -42,12 +42,15 @@ $title = 'Forward';
 
 	<?= $this->Html->css('colors.css') . "\n" ?>
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-</head>
+    
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    
+    </head> 
 <body class="home">
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12">
-                <h1 id="titles" class="text-center">Register</h1>
+                <h1 class ="titles" class="text-center">Register</h1>
             </div>
         </div>
     </div>
@@ -57,19 +60,19 @@ $title = 'Forward';
                 </div>
                 <?php echo $this->Form->create('User',array('class'=>'form-horizontal','role' => 'form', 'inputDefaults'=>array('label'=>false)));?>
                     <div class="form-group">
-                      <div class = "user1" class="col-xs-9">
+                      <div class = "user2" class="col-xs-9">
                           <?php echo $this->Form->input('email',array('class'=>'form-control', 'Placeholder'=>'Email', 'label'=>false));?>
                           <br>
                       </div>
-                        <div class = "user1" class="col-xs-9">
+                        <div class = "user2" class="col-xs-9">
                             <?php echo $this->Form->input('username',array('class'=>'form-control', 'Placeholder'=>'Username', 'label'=>false));?>
                             <br>
                         </div>
-                        <div class = "user1" class="col-xs-9">
+                        <div class = "user2" class="col-xs-9">
                             <?php echo $this->Form->input('password',array('class'=>'form-control', 'Placeholder'=>'Password', 'label'=>false));?>
                             <br>
                         </div>
-                        <div class = "user1" class="col-xs-9">
+                        <div class = "user2" class="col-xs-9">
                             <?php echo $this->Form->input('password',array('class'=>'form-control', 'Placeholder'=>'Confirm Password', 'label'=>false));?>
                             <br>
                         </div>
