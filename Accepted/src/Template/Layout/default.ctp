@@ -60,7 +60,7 @@ $description = 'Forward';
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <div class="btn-group navbar-btn">
-                            <button data-toggle="dropdown" class="btn glyphicon glyphicon-cog dropdown-toggle"></button>
+                            <button data-toggle="dropdown" class="btn dropdown-toggle" style="color: black"><i class="fa fa-cog" aria-hidden="true"></i></button>
                             <ul class="dropdown-menu">
                                 <li> <?= $this->Html->link(__($username),'/profiles/' . $id)?> </li>
                                 <li><?= $this->Html->link(__('Sign-out <i class="fa fa-sign-out"></i>'),'/users/logout', ['escape' => false])?></li>

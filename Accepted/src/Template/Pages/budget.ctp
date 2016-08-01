@@ -2,26 +2,28 @@
 	$this->layout = 'default';
 ?>
 <div ng-controller="budgetCtrl">
-    <h2>Budget Planning</h2>
+    <h1>Budget Planning</h1>
     <hr>
 
-    <p>Welcome to Accepted's budget planner!</p>
-    <p>Do you ever find yourself having trouble with your money management?</p>
-    <p>Well, luckily for you, you can create a budget for yourself using this tool!</p>
+    <p3>Welcome to Accepted's budget planner!</p3>
+    <br>
+    <p3>Do you ever find yourself having trouble with your money management?</p3>
+    <br>
+    <p3>Well, luckily for you, you can create a budget for yourself using this tool!</p3>
 
     <hr>
 	<div class="row">
 		<div class="col-xs-3">
 		</div>
-		<div class="col-xs-6">
+		<div class="well alert1 alert1-info col-xs-6">
 		    <form role="form">
 		        <div class="form-group">
-		            <label class="text-primary" for="total">Title</label>
-		            <input ng-model="model.title" class="form-control" type="text" id="total" placeholder="Enter title for this budget">
+		            <label class="sidetitle2" for="total">Title</label>
+		            <input ng-model="model.title" class="form-control" type="text" id="total" placeholder="Enter title for this budget" >
 
 		            <br>
 
-		            <label class="text-primary" for="total">Total Amount</label>
+		            <label class="sidetitle2" for="total">Total Amount</label>
 		            <div class="input-group">
 		                <div class="input-group-addon">$</div>
 		                <input ng-model="model.tentativeAmount" class="form-control" type="text" id="total" placeholder="Enter your total spending money">
@@ -31,7 +33,7 @@
 		        </div>
 
 		        <div class="form-group">
-		            <label class="text-primary">Money Spread</label>
+		            <label class="sidetitle2">Money Spread</label>
 		            <div ng-repeat="spendItem in model.spendItems">
 		                <p><input ng-model="spendItem.name" class="form-control" type="text" placeholder="Enter expenditure name"></p>
 		                <div class="input-group">
@@ -42,19 +44,19 @@
 		            </div>
 		        </div>
 		    </form>
-		    <button ng-click="addSpendItem()" class="btn btn-primary"><i class="fa fa-plus"></i></button>
+		    <button ng-click="addSpendItem()" class="btn btn-primary margin1"><i class="fa fa-plus"></i></button>
 
 		    <br>
 		    <br>
 
-		    <p ng-class='model.amountLeft < 0 ? "text-danger" : "text-success"'><strong>Money Left: ${{ model.amountLeft }}</strong></p>
+		    <p ng-class='model.amountLeft < 0 ? "text-danger margin2" : "text-success margin2"'><strong>Money Left: ${{ model.amountLeft }}</strong></p>
 
 		    <br>
 
-		    <button ng-click="createBudgetText()" class="btn btn-primary">Create Budget Summary</button>
+		    <button ng-click="createBudgetText()" class="btn btn-primary margin1">Create Budget Summary</button>
 		    <br>
 		    <br>
-		    <a ng-click="downloadBudget()" class="btn btn-primary" download="{{ model.title }}Budget.txt" ng-if="model.showDownload" ng-href="{{ model.downloadLink }}">Download Budget Summary</a>
+		    <a ng-click="downloadBudget()" class="btn btn-primary margin1" download="{{ model.title }}Budget.txt" ng-if="model.showDownload" ng-href="{{ model.downloadLink }}">Download Budget Summary</a>
 		</div>
 		<div class="col-xs-3">
 		</div>
