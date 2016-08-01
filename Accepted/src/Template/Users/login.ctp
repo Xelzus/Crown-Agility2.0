@@ -57,21 +57,21 @@ $title = 'Forward';
                             <li data-target="#myCarousel" data-slide-to="2"></li>
                             <li data-target="#myCarousel" data-slide-to="3"></li>
                         </ol>
-                        
+
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
                             <div class="item active">
                                 <img style=" width: auto; height: 300px; max-height: 300px; margin:0 auto;"class='img-circle img-responsive'src="img/student.jpg" alt="student">
                             </div>
-                            
+
                             <div class="item">
                                 <img style=" width: auto; height: 300px; max-height: 300px; margin:0 auto;" class='img-circle img-responsive'src="img/student2.jpg" alt="student">
                             </div>
-                            
+
                             <div class="item">
                                 <img style=" width: auto; height: 300px; max-height: 300px; margin:0 auto;" class='img-circle img-responsive' src="img/student3.jpg" alt="student">
                             </div>
-                            
+
                             <div class="item">
                                 <img style=" width: auto; height: 300px; max-height: 300px; margin:0 auto;" class='img-circle img-responsive'  src="img/student4.jpg" alt="student">
                             </div>
@@ -89,9 +89,9 @@ $title = 'Forward';
         <div class="row content">
             <div class = "center" class="col-sm-4">
                 <div class="col-xs-15">
-                    
+
                     <h3 class= "id1" class="text-left">Log-in</h3>
-                
+
                  <?php echo $this->Form->create('User',array('class'=>'form-horizontal','name'=>'loginForm','inputDefaults'=>array('label'=>false)));?>
                     <div class="form-group">
                         <div class="col-xs-9">
@@ -105,7 +105,7 @@ $title = 'Forward';
                             <br>
                         </div>
                         <div class="col-xs-9">
-                            <button ng-show="loginForm.username.$invalid||loginForm.password.$invalid" disabled type="submit" class="btn btn-danger"> Sign up </button>
+                            <button ng-show="loginForm.username.$invalid||loginForm.password.$invalid" disabled type="submit" class="btn btn-danger"> Login </button>
                             <?php echo $this->Form->submit('Login',array('ng-show'=>'loginForm.username.$valid&&loginForm.password.$valid','class'=>'btn btn-primary'))?>
                         </div>
                         <div class="col-xs-6">
@@ -115,11 +115,11 @@ $title = 'Forward';
                 <?php echo $this->Form->end();?>
                 </div>
             </div>
-        
-            
+
+
         </div>
 	</div>
-    
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
