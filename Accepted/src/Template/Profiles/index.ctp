@@ -24,7 +24,7 @@
             <div ng-if=<?= '"' . h($isOwner) . '"'  ?>>
                 <h1 style="text-align: center">Reminders</h1>
                 <hr>
-                <div ng-if=<?= '"' . h($isOwner) . '"'  ?> class="text-left">
+                <div class="text-left">
                     <!--Reminders-->
                         <div class="form-group alert2 alert2-info" id="addReminderForm">
                             <p class = "sidetitle2">New Reminder</p>
@@ -73,10 +73,10 @@
                     </div>
                 </div>
             </div>
-            
+
 			<br>
 
-			<div class = "col-sm-12">
+			<div class = "col-xs-12">
 				<h1 style="text-align: center">Latest Posts</h1>
 				<hr>
 				<div>

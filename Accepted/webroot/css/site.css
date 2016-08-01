@@ -110,14 +110,13 @@ th{
     background-color: #EFE0B9;
     font-size: 27px;
     text-align: center;
-    color: 
 }
 
 .alert1-info {
     color: #31708f;
     background-color: #EFE0B9;
     border-color: #7F171F;
-    
+
 }
 .alert1 {
     padding: 15px;
@@ -131,14 +130,13 @@ th{
     color: #31708f;
     background-color: #EFE0B9;
     border-color: #7F171F;
-    
+
 }
 .alert2 {
     padding: 15px;
     border: 3px solid #7F171F;
     border-radius: 15px;
     font-size: 17px;
-    width: 750px;
 }
 
 /* Set gray background color and 100% height */
