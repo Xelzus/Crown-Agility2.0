@@ -29,7 +29,7 @@ $title = 'Forward';
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="">
 <head>
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -92,26 +92,25 @@ $title = 'Forward';
                     
                     <h3 class= "id1" class="text-left">Log-in</h3>
                 
-                <?php echo $this->Form->create('User',array('class'=>'form-horizontal','inputDefaults'=>array('label'=>false)));?>
+                 <?php echo $this->Form->create('User',array('class'=>'form-horizontal','name'=>'loginForm','inputDefaults'=>array('label'=>false)));?>
                     <div class="form-group">
-                        <div class = "user" class="col-xs-9">
-                            <?php echo $this->Form->input('username',array('class'=>'form-control', 'Placeholder'=>'Username', 'label'=>false));?>
+                        <div class="col-xs-9">
+                            <?php echo $this->Form->input('username',array('required','ng-pattern'=>'/^[a-zA-Z0-9\s]*$/','name'=>'username','ng-model'=>'username','class'=>'form-control', 'Placeholder'=>'Username', 'label'=>false));?>
+                            <span ng-show="loginForm.username.$invalid" style="color:red; font-size:80%">You must enter a valid username to continue</span>
                             <br>
                         </div>
-                        <div class = "password" class="col-xs-9">
-                            <?php echo $this->Form->input('password',array('class'=>'form-control', 'Placeholder'=>'Password', 'label'=>false));?>
+                        <div class="col-xs-9">
+                            <?php echo $this->Form->input('password',array('required','name'=>'password','ng-model'=>'password','class'=>'form-control', 'Placeholder'=>'Password', 'label'=>false));?>
+                            <span ng-show="loginForm.password.$invalid" style="color:red; font-size:80%">Please enter your password to continue</span>
                             <br>
+                        </div>
+                        <div class="col-xs-9">
+                            <button ng-show="loginForm.username.$invalid||loginForm.password.$invalid" disabled type="submit" class="btn btn-danger"> Sign up </button>
+                            <?php echo $this->Form->submit('Login',array('ng-show'=>'loginForm.username.$valid&&loginForm.password.$valid','class'=>'btn btn-primary'))?>
                         </div>
                         <div class="col-xs-6">
-                            <?php echo $this->Form->submit('Login',array('class'=>'btn btn-lg btn-primary'))?>
-                             
-                        </div>
-                          <div class="col-xs-6">
                               <a class="btn btn-lg btn-primary" href="users/register">Register</a>
                               </div>
-                       
-           
-            
                     </div>
                 <?php echo $this->Form->end();?>
                 </div>
@@ -122,6 +121,7 @@ $title = 'Forward';
 	</div>
     
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
 </html>
