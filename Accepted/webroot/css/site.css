@@ -75,6 +75,14 @@ body {
     margin-left: 0px;
 }
 
+.sidetitle4{
+    text-align: left;
+    font-size: 21px;
+    color: black;
+    text-shadow: 0px 0px 3px  #817D62;
+    margin-left: 0px;
+}
+
 .btn-primary1 {
     color: #fff;
     background-color: #337ab7;
@@ -140,6 +148,21 @@ th{
     margin-top: 10px;
 }
 
+.alert3-info {
+    color: #31708f;
+    background-color: #EFE0B9;
+    border-color: #7F171F;
+
+}
+.alert3 {
+    padding: 15px;
+    margin-top: 17px;
+    border: 3px solid #7F171F;
+    border-radius: 15px;
+    font-size: 17px;
+    width: 100%;
+}
+
 /* Set gray background color and 100% height */
 <style>
     .box {
@@ -149,6 +172,7 @@ th{
         background: transparent;
         border: 3px solid #337ab7;
         color: #fff;
+        width: 100%;
     }
 
     hr {
