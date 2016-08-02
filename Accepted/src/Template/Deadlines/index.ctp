@@ -1,22 +1,8 @@
-<style>
-    .box {
-        margin-bottom: 20px;
-        padding: 30px 15px;
-        /*background: rgba(255,255,255,0.75);*/
-        background: transparent;
-        border: 3px solid #337ab7;
-        color: #fff;
-    }
+<head>
+<?= $this->Html->css('site.css') . "\n" ?>
+</head>
 
-    hr {
-        background-color: #337ab7;
-        color: #337ab7;
-        height: 3px;
-        border: 0;
-    }
-</style>
-
-<h2>Univerisity Fall 2016 Deadlines</h2>
+<h1 style="text-align: center">Univerisity Fall 2016 Deadlines</h2>
 
 <hr>
 

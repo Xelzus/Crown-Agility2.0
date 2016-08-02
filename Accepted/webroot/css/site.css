@@ -141,7 +141,23 @@ th{
 }
 
 /* Set gray background color and 100% height */
+<style>
+    .box {
+        margin-bottom: 20px;
+        padding: 30px 15px;
+        /*background: rgba(255,255,255,0.75);*/
+        background: transparent;
+        border: 3px solid #337ab7;
+        color: #fff;
+    }
 
+    hr {
+        background-color: #337ab7;
+        color: #337ab7;
+        height: 3px;
+        border: 0;
+    }
+</style>
 
 /* On small screens, set height to 'auto' for sidenav and grid */
 
