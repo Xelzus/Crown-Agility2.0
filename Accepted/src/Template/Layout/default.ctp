@@ -45,7 +45,7 @@ $description = 'Forward';
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/Crown-Agility2.0/Accepted/users/login">
+                <a class="navbar-brand" href="<?php echo $this->Url->build(array('controller' => 'Users', 'action' => 'login')); ?>">
                     <?= $this->Html->image('crownAgilityLogoTransparent.png', array('alt' => 'CA', 'height' => '25', 'width' => '25')) ?>
                 </a>
             </div>
