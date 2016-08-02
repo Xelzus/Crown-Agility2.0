@@ -81,6 +81,11 @@ $title = 'Forward';
                             <br>
                         </div>
                         <div class="col-xs-11">
+                            <?php
+						     echo $this->Html->link('Return to Login',
+						  					array('controller'=>'users','action'=>'login'),
+						  					array('escape'=>false, 'class'=>'btn btn-primary'));
+						     ?>
                             <button ng-show="regForm.username.$invalid||regForm.email.$invalid||regForm.password1.$invalid||regForm.password2.$invalid" disabled type="submit" class="btn btn-danger"> Sign up </button>
                             <?php echo $this->Form->submit('Sign Up',array('ng-show'=>'regForm.email.$valid&&regForm.username.$valid&&regForm.password1.$valid&&regForm.password2.$valid','class'=>'btn btn-lg btn-primary'))?>
                         </div>
