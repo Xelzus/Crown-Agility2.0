@@ -50,7 +50,7 @@ $title = 'Forward';
             </div>
         </div>
     </div>
-           <div class= "center1" class="col-sm-4">
+           <div class= "center1" class="col-xs-4">
                 <div class="col-xs-9">
                     <h3 class = "id2"> <b>Sign-up</b> </h3>
                 </div>

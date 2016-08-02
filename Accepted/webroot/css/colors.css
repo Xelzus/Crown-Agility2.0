@@ -1,9 +1,9 @@
-body 
+body
 {
     background-image: url(../img/wood3.jpg)    ;
 }
 
-.navbar 
+.navbar
 {
     margin-bottom: 0;
     border-radius: 0;
@@ -21,7 +21,7 @@ body
 
 .user2{
     margin: -2%;
-    margin-left: 50px;   
+    margin-left: 50px;
     text-align: center;
     width: 400px;
     border-bottom: 2px;
@@ -31,23 +31,13 @@ body
 {
     text-align: center;
 }
-.password{
-    margin-top: 1px;
-    margin: auto;
-    text-align: center;
-    width: 400px;
-}
 
 .center{
-    margin: auto;
     border-radius: 20px;
-    border: 6px solid  #7F171F;
+    border: 6px solid #7F171F;
     padding: 8px;
-    background-color:  #EFE0B9;
-    width: 500px;
-    height: 270px;
+    background-color: #EFE0B9;
     text-align: center;
-    
 }
 
 .register{
@@ -60,8 +50,8 @@ body
     padding: 8px;
     background-color:  #EFE0B9;
     width: 500px;
-    height: 320px;
-    text-align: center;    
+    height: 400px;
+    text-align: center;
 }
 
 
@@ -85,7 +75,7 @@ body
     text-shadow: 2px 1px 1px black;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-    
+
 }
 
 .p{
@@ -94,10 +84,10 @@ body
     font-family: sans-serif;
     text-shadow: 3px 1px 1px #330000;
     text-align: center;
-    
+
 }
 
-.row.content 
+.row.content
 {
     height: 450px
 }
@@ -105,7 +95,7 @@ body
 
 /* Set gray background color and 100% height */
 
-.sidenav 
+.sidenav
 
     padding-top: 20px;
     background-color: sss#f1f1f1;
@@ -118,41 +108,41 @@ body
     font-family: sans-serif;
     font-size: 40px;
     font-weight: bolder;
-    
+
 }
 
 .id2{
-    
+
     color: black;
     font-family: sans-serif;
     font-size: 30px;
     text-align: center;
     margin-left: 103px;
-    
+
 }
 
 /* On small screens, set height to 'auto' for sidenav and grid */
 
-@media screen and (max-width: 767px) 
+@media screen and (max-width: 767px)
 {
-    .sidenav 
+    .sidenav
 	{
         height: 500px;
         padding: 15px;
     }
-    .row.content 
+    .row.content
 	{
         height: auto;
     }
 }
 
-#logo 
+#logo
 {
     width: 100%;
     height: auto;
 }
 
-#h4, 
+#h4,
 {
     color: white;
 }
@@ -168,10 +158,10 @@ body
     font-size: 45px;
     font-family:sans-serif;
     text-shadow: 3px 3px 2px black;
-    
+
 }
 
-#student 
+#student
 {
     max-width: 50%;
     margin-left: auto;
@@ -195,8 +185,3 @@ body
     background-color: transparent;
     margin-left: 535px;
 }
-
-
-
-
-
