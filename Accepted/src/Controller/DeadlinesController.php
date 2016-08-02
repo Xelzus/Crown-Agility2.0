@@ -21,7 +21,7 @@ class DeadlinesController extends AppController
     {
         parent::beforeFilter($event);
 
-        $this->Auth->allow();
+        $this->Auth->allow(['index', 'getDeadlines']);
     }
 
     /**
