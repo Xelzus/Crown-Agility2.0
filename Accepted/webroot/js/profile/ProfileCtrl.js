@@ -37,6 +37,9 @@ app.controller("profileCtrl", function ($scope, $filter, $http, profileSvc) {
         .success(function(data) {
             if(data.result)
             {
+                $scope.model.newReminder.title = '';
+                $scope.model.newReminder.description = '';
+                $scope.model.newReminder.remindOn = '';
                 $scope.updateReminders();
             }
         });

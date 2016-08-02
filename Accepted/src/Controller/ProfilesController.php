@@ -165,7 +165,7 @@ class ProfilesController extends AppController
             $reminder = $this->Reminders->newEntity();
 
             $this->request->data['user_id'] = $this->Auth->user('id');
-            $this->request->data['remindOn'] = Time::now();
+            $this->request->data['remindOn'] = new Time($this->request->data['remindOn']);
 
             $reminder = $this->Reminders->patchEntity($reminder, $this->request->data);
             $result = $this->Reminders->save($reminder);
