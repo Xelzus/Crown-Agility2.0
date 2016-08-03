@@ -26,7 +26,7 @@ $description = 'Forward';
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	   <?= $this->Html->meta('icon') . "\n" ?>
-      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <?= $this->Html->css('bootstrap.css') . "\n" ?>
 	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 	  <?= $this->Html->css('site.css') . "\n" ?>
 
@@ -45,8 +45,8 @@ $description = 'Forward';
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/Crown-Agility2.0/Accepted/users/login">
-                    <?= $this->Html->image('crownAgilityLogoTransparent.png', array('alt' => 'CA', 'height' => '25', 'width' => '25')) ?>
+                <a class="navbar-brand" href="<?php echo $this->Url->build(array('controller' => 'Users', 'action' => 'login')); ?>">
+                    <?= $this->Html->image('accepted_version3.png', array('alt' => 'CA', 'height' => '25', 'width' => '100')) ?>
                 </a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
@@ -60,7 +60,7 @@ $description = 'Forward';
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <div class="btn-group navbar-btn">
-                            <button data-toggle="dropdown" class="btn glyphicon glyphicon-cog dropdown-toggle"></button>
+                            <button data-toggle="dropdown" class="btn dropdown-toggle" style="color: black"><i class="fa fa-cog" aria-hidden="true"></i></button>
                             <ul class="dropdown-menu">
                                 <li> <?= $this->Html->link(__($username),'/profiles/' . $id)?> </li>
                                 <li><?= $this->Html->link(__('Sign-out <i class="fa fa-sign-out"></i>'),'/users/logout', ['escape' => false])?></li>
@@ -75,6 +75,8 @@ $description = 'Forward';
       <?= $this->Flash->render() ?>
       <?= $this->fetch('content') ?>
     </div>
+    
+    
 
     <?= $this->Html->script('landing.js') . "\n" ?>
 </body>

@@ -1,36 +1,22 @@
-<style>
-    .box {
-        margin-bottom: 20px;
-        padding: 30px 15px;
-        /*background: rgba(255,255,255,0.75);*/
-        background: transparent;
-        border: 3px solid #337ab7;
-        color: #fff;
-    }
+<head>
+<?= $this->Html->css('site.css') . "\n" ?>
+</head>
 
-    hr {
-        background-color: #337ab7;
-        color: #337ab7;
-        height: 3px;
-        border: 0;
-    }
-</style>
-
-<h2>Univerisity Fall 2016 Deadlines</h2>
+<h1 style="text-align: center">Univerisity Fall 2016 Deadlines</h1>
 
 <hr>
+<div class="col-xs-12">
+    <div class="box alert5 alert5-info">
+        <p6>Hey! Class of 2016! You have to stay on top of these college application deadlines! Don't let any of these pass you by!</p6>
+        <br>
+        
+        <p6>Just choose the state you're interested in and you will be shown all the upcoming deadlines for that state's colleges. If you don't see the school you're interested in, then their deadline for the Fall 2016 semester may have already passed or we may not have info on the school. If that is the case, we apologize for the inconvienience. </p6>
+    </div>
 
-<p>Hey! Class of 2016! You have to stay on top of these college application deadlines!</p>
 
-<p>
-    Don't let any of these pass you by! Just choose the state you're interested in
-    and you will be shown all the upcoming deadlines for that state's colleges. If
-    you don't see the school you're interested in, then their deadline for the
-    Fall 2016 semester may have already passed or we may not have info on the school.
-    If that is the case, we apologize for the inconvienience.
-</p>
 
 <hr>
+</div>
 
 <div ng-controller="deadlineCtrl">
     <div class="row">
@@ -97,13 +83,13 @@
 
     <br>
     <div class="row">
-        <div class="col-xs-2">
+        <div class="col-xs-1">
         </div>
-        <div class="col-xs-8">
-            <div class="box" ng-repeat="collegeDatum in model.collegeData">
+        <div class="col-xs-10">
+            <div class="box alert3 alert3-info" ng-repeat="collegeDatum in model.collegeData">
                 <div class="row">
                     <div class="col-xs-8">
-                        <strong> {{ collegeDatum.college }} </strong>
+                        <strong class = "sidetitle4"> {{ collegeDatum.college }} </strong>
                         <br>
                         Deadline: {{ collegeDatum.deadline }}
                     </div>
@@ -113,7 +99,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-xs-2">
+        <div class="col-xs-1">
         </div>
     </div>
 </div>

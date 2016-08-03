@@ -23,8 +23,6 @@ class ProfilesController extends AppController
 
 	public function beforeFilter(Event $event) {
         parent::beforeFilter($event);
-
-        //$this->Auth->allow();
     }
 
     /**
@@ -145,15 +143,6 @@ class ProfilesController extends AppController
 
         $reminders = $user['reminders'];
 
-        /*for ($i = 0; $i < 2; $i++)
-        {
-            $reminders[] = (object) [
-              'title' => 'title' . ($i + 1),
-              'description' => 'description' . ($i + 1),
-              'remindOn' => Time::now()
-            ];
-        }*/
-
         $this->set('reminders', $reminders);
         $this->set('_serialize', ['reminders']);
     }
@@ -167,7 +156,7 @@ class ProfilesController extends AppController
             $reminder = $this->Reminders->newEntity();
 
             $this->request->data['user_id'] = $this->Auth->user('id');
-            $this->request->data['remindOn'] = Time::now();
+            $this->request->data['remindOn'] = new Time($this->request->data['remindOn']);
 
             $reminder = $this->Reminders->patchEntity($reminder, $this->request->data);
             $result = $this->Reminders->save($reminder);

@@ -2,26 +2,70 @@
 	$this->layout = 'default';
 ?>
 <div ng-controller="budgetCtrl">
-    <h2>Budget Planning</h2>
+    <h1>Budget Planning</h1>
     <hr>
+<div></div>
+<div class="col-sm-6 alert4 alert4-info">
+    <p5 class= "sidetitle3">Welcome to Accepted's budget planner!</p5>
+    <br>
+    <p5>Do you ever find yourself having trouble with your money management?</p5>
+    <br>
+<<<<<<< HEAD
+    <p3>
+		Well, luckily for you, you can create a budget for yourself using this
+		tool!
+	</p3>
+	<br>
+	<br>
+	<p3>
+		Create a title for the budget, type in an initial amount, set it with the "Set" button
+		and then add your expenditures. Your balance will auto-update as you add
+		more items.
+	</p3>
+	<br>
+    <p3>
+		Once you are done, you can hit the "Create Budget Summary" button and a
+		new button will appear that will allow you to download a summary of what
+		you entered into the form that you can keep for your records.
+	</p3>
 
-    <p>Welcome to Accepted's budget planner!</p>
-    <p>Do you ever find yourself having trouble with your money management?</p>
-    <p>Well, luckily for you, you can create a budget for yourself using this tool!</p>
+    <br>
+	<p3>Refresh the page if you'd like to start over.</p3>
 
     <hr>
+=======
+    <p5>Well, luckily for you, you can create a budget for yourself using this tool! Creating the budget summary will create a file with the title, money spent, item name, and money left.</p5>
+    <p5></p5>
+</div>
+<div class="col-sm-6 alert4 alert4-info">
+    <p5>A budget done correctly is the most precise tool for analysing your finances imaginable. It answers two key questions...</p5>
+    <br>
+    <ul>
+        <li>
+        <p5><b>Do I spend more than I earn?</b></p5>
+        </li>
+        <br>
+        <li><p5><b> What can I afford to spend?</b></p5>
+        </li>
+    </ul>
+    <br>
+</div>
+    <div class="col-sm-12">
+    <hr></div>
+    
+>>>>>>> origin/master
 	<div class="row">
 		<div class="col-xs-3">
 		</div>
-		<div class="col-xs-6">
-		    <form role="form">
+		<div class="well alert1 alert1-info col-xs-6">
+		    <form name="budgetForm" role="form">
 		        <div class="form-group">
-		            <label class="text-primary" for="total">Title</label>
-		            <input ng-model="model.title" class="form-control" type="text" id="total" placeholder="Enter title for this budget">
+		            <label class="sidetitle2" for="total">Title</label>
+		            <input ng-model="model.title" class="form-control" type="text" id="total" placeholder="Enter title for this budget" >
 
 		            <br>
 
-		            <label class="text-primary" for="total">Total Amount</label>
+		            <label class="sidetitle2" for="total">Total Amount</label>
 		            <div class="input-group">
 		                <div class="input-group-addon">$</div>
 		                <input ng-model="model.tentativeAmount" class="form-control" type="text" id="total" placeholder="Enter your total spending money">
@@ -31,7 +75,7 @@
 		        </div>
 
 		        <div class="form-group">
-		            <label class="text-primary">Money Spread</label>
+		            <label class="sidetitle2">Money Spread</label>
 		            <div ng-repeat="spendItem in model.spendItems">
 		                <p><input ng-model="spendItem.name" class="form-control" type="text" placeholder="Enter expenditure name"></p>
 		                <div class="input-group">
@@ -42,19 +86,19 @@
 		            </div>
 		        </div>
 		    </form>
-		    <button ng-click="addSpendItem()" class="btn btn-primary"><i class="fa fa-plus"></i></button>
+		    <button ng-click="addSpendItem()" class="btn btn-primary margin1"><i class="fa fa-plus"></i></button>
 
 		    <br>
 		    <br>
 
-		    <p ng-class='model.amountLeft < 0 ? "text-danger" : "text-success"'><strong>Money Left: ${{ model.amountLeft }}</strong></p>
+		    <p ng-class='model.amountLeft < 0 ? "text-danger margin2" : "text-success margin2"'><strong>Money Left: ${{ model.amountLeft }}</strong></p>
 
 		    <br>
 
-		    <button ng-click="createBudgetText()" class="btn btn-primary">Create Budget Summary</button>
+		    <button ng-click="createBudgetText()" class="btn btn-primary margin1">Create Budget Summary</button>
 		    <br>
 		    <br>
-		    <a ng-click="downloadBudget()" class="btn btn-primary" download="{{ model.title }}Budget.txt" ng-if="model.showDownload" ng-href="{{ model.downloadLink }}">Download Budget Summary</a>
+		    <a ng-click="downloadBudget()" class="btn btn-primary margin1" download="{{ model.title }}Budget.txt" ng-if="model.showDownload" ng-href="{{ model.downloadLink }}">Download Budget Summary</a>
 		</div>
 		<div class="col-xs-3">
 		</div>

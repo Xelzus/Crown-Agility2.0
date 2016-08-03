@@ -29,7 +29,7 @@ $title = 'Forward';
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="">
 <head>
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,7 +47,7 @@ $title = 'Forward';
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12">
-                <h1 id="h1" class="text-center">Welcome to Forward! </h1>
+                <h1 class="titles">Welcome to Accepted </h1>
 
                   <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width:50%; margin:0 auto; float:center;">
                         <!-- Indicators -->
@@ -57,64 +57,77 @@ $title = 'Forward';
                             <li data-target="#myCarousel" data-slide-to="2"></li>
                             <li data-target="#myCarousel" data-slide-to="3"></li>
                         </ol>
-                        
+
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
                             <div class="item active">
-                                <img style=" width: auto; height: 300px; max-height: 300px; margin:0 auto;"class='img-circle img-responsive'src="img/student.jpg" alt="student">
+                                <img style="width: auto; height: 300px; max-height: 300px; margin:0 auto;" class='img-circle img-responsive' src="img/student.jpg" alt="student">
                             </div>
-                            
+
                             <div class="item">
-                                <img style=" width: auto; height: 300px; max-height: 300px; margin:0 auto;" class='img-circle img-responsive'src="img/student2.jpg" alt="student">
+                                <img style="width: auto; height: 300px; max-height: 300px; margin:0 auto;" class='img-circle img-responsive' src="img/student2.jpg" alt="student">
                             </div>
-                            
+
                             <div class="item">
-                                <img style=" width: auto; height: 300px; max-height: 300px; margin:0 auto;" class='img-circle img-responsive' src="img/student3.jpg" alt="student">
+                                <img style="width: auto; height: 300px; max-height: 300px; margin:0 auto;" class='img-circle img-responsive' src="img/student3.jpg" alt="student">
                             </div>
-                            
+
                             <div class="item">
-                                <img style=" width: auto; height: 300px; max-height: 300px; margin:0 auto;" class='img-circle img-responsive'  src="img/student4.jpg" alt="student">
+                                <img style="width: auto; height: 300px; max-height: 300px; margin:0 auto;" class='img-circle img-responsive'  src="img/student4.jpg" alt="student">
                             </div>
                         </div>
                 </div>
                 <br>
                 <br>
-               <p id="p" class="text-center">Forward is a website for students made by students to help a successful transition from highschool to college.</p>
+               <p class ="p">Accepted is a website for students made by students to help a successful transition from highschool to college.</p>
                 <hr id= "linea">
             </div>
         </div>
     </div>
     <div class="container-fluid text-center">
-        <p id = "p1" class="text-center">Login or Create an Account</p>
+        <p class = "p1">Login or Create an Account</p>
         <div class="row content">
-            <div id = rcorners2 class="col-sm-4">
-                <div class="col-xs-15">
-                    
-                    <h3 id="h3" class="text-left">Log-in</h3>
-                
-                <?php echo $this->Form->create('User',array('class'=>'form-horizontal','inputDefaults'=>array('label'=>false)));?>
-                    <div class="form-group">
-                        <div class="col-xs-9">
-                            <?php echo $this->Form->input('username',array('class'=>'form-control', 'Placeholder'=>'Username', 'label'=>false));?>
+
+            <div class="col-xs-4">
+            </div>
+            <div class = "center col-xs-4">
+                <div class="col-xs-12">
+
+                    <h3 class= "id1" class="text-left">Log-in</h3>
+
+                 <?php echo $this->Form->create('User',array('class'=>'form-horizontal','name'=>'loginForm','inputDefaults'=>array('label'=>false)));?>
+                    <div class="col-xs-12">
+                        <div class="form-group">
+                            <?php echo $this->Form->input('username',array('required','ng-pattern'=>'/^[a-zA-Z0-9\s]*$/','name'=>'username','ng-model'=>'username','class'=>'form-control', 'Placeholder'=>'Username', 'label'=>false));?>
+                            <span ng-show="loginForm.username.$invalid" style="color:red; font-size:80%">You must enter a valid username to continue</span>
                             <br>
                         </div>
-                        <div class="col-xs-9">
-                            <?php echo $this->Form->input('password',array('class'=>'form-control', 'Placeholder'=>'Password', 'label'=>false));?>
+                        <div class="form-group">
+                            <?php echo $this->Form->input('password',array('required','name'=>'password','ng-model'=>'password','class'=>'form-control', 'Placeholder'=>'Password', 'label'=>false));?>
+                            <span ng-show="loginForm.password.$invalid" style="color:red; font-size:80%">Please enter your password to continue</span>
                             <br>
                         </div>
-                        <div class="col-xs-9">
-                            <?php echo $this->Form->submit('Login',array('class'=>'btn btn-primary'))?>
+                        <div class="form-group">
+                            <button ng-show="loginForm.username.$invalid||loginForm.password.$invalid" disabled type="submit" class="btn btn-danger"> Login </button>
+                            <?php echo $this->Form->submit('Login',array('ng-show'=>'loginForm.username.$valid&&loginForm.password.$valid','class'=>'btn btn-primary'))?>
+                        </div>
+                        <div class="form-group">
+                              <a class="btn btn-lg btn-primary" href="users/register">Register</a>
                         </div>
                     </div>
+                    <?= $this->Flash->render() ?>
                 <?php echo $this->Form->end();?>
                 </div>
             </div>
-     
-            
+            <div class="col-xs-4">
+            </div>
+
+
         </div>
 	</div>
-    <a class="btn btn-primary" href="users/register">Register</a>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
 </html>
