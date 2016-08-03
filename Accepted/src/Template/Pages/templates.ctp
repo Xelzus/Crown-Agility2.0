@@ -42,10 +42,10 @@
     <hr>
 
 
-    <div class ="col-sm-4 text left">
-        <h3> another picture</h3>
+    <div class ="col-sm-4 left">
+        <img src="img/tools.png" class="align-left1" />
 
-        </div>
+    </div>
     <div id = rcorners2 class ="col-sm-7">
             <p id = titles>
                How to build it?
@@ -64,8 +64,46 @@
                Templates
             </p>
         <p id = text>
-            Here we provide some templates in order to help you have a better understanding on how the Resume should be written, and the different formats that you can use.
+            Here we provide some templates in order to help you have a better understanding on how the Resume should be written, and the different formats that you can use. You can find <a target="_blank" href="http://www.hloom.com/download-free-high-school-graduate-resume-samples-and-templates/">free college templates</a> on <a target="_blank" href="http://www.hloom.com/">hloom.com</a>.
         </p>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width:50%; margin:0 auto; float:center;">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                            <li data-target="#myCarousel" data-slide-to="3"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <a target="_blank" href="http://www.hloom.com/get/accounting+assistant/">
+                                <img style="width: auto; height: 400px; max-height: 1000px; margin:0 auto;" class='img-responsive' src="img/resume_temp_2.jpg" alt="Resume One">
+                                </a>
+                            </div>
+
+                            <div class="item">
+                                <a target="_blank" href="http://www.hloom.com/get/administrative+assistant/">
+                                <img style="width: auto; height: 400px; max-height: 1000px; margin:0 auto;" class='img-responsive' src="img/resume_temp_3.jpg" alt="Template Two">
+                                </a>
+                            </div>
+
+                            <div class="item">
+                                <a target="_blank" href="http://www.hloom.com/get/book+or+retail+store+position//">
+                                <img style="width: auto; height: 400px; max-height: 1000px; margin:0 auto;" class='img-responsive' src="img/resume_temp_4.jpg" alt="Template Three">
+                                </a>
+                            </div>
+
+                            <div class="item">                                                               
+                                <a target="_blank" href="http://www.hloom.com/get/call+center+and+customer+service/">
+                                <img style="width: auto; height: 400px; max-height: 1000px; margin:0 auto;" class='img-responsive'  src="img/resume_temp_5.jpg" alt="Template Four">
+                                </a>
+                            </div>
+                        </div>
+            <h5>Some College Resume Examples</h5>
+        </div>
     </div>
+    
 
 </div>

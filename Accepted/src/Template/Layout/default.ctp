@@ -75,6 +75,8 @@ $description = 'Forward';
       <?= $this->Flash->render() ?>
       <?= $this->fetch('content') ?>
     </div>
+    
+    
 
     <?= $this->Html->script('landing.js') . "\n" ?>
 </body>

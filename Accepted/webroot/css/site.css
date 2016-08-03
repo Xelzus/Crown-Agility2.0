@@ -277,6 +277,26 @@ img.align-right	{
     margin-left: 100px;
     background-color: #EFE0B9;
 }
+.carousel-indicators li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 10px;
+    text-indent: 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    background-color: chartreuse;
+    box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5);    
+}
+
+.carousel-indicators .active {
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+    background-color: #ffff99;
+}
+
 #titles {
     color: cadetblue;
     font-weight: 400;
