@@ -32,7 +32,7 @@
 
 <div class="row">
 	<div class="col-lg-12 alert">
-		<table class="table1 table-bordered1">
+		<table class="table">
 			<thead>
 				<tr class = "sidetitle1">
 					<th colspan=2>Topic</th>

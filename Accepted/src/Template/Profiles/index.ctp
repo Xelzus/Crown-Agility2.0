@@ -9,13 +9,13 @@
 	<div class="row">
 		<div ng-class=<?= '"' . h($isOwner) . ' ? \'col-xs-4\' : \'col-xs-12\'"'  ?>>
 			<div class="well alert1 alert1-info">
-				<?= $this->Html->image('users/' . h($profile[0]->image_name) , ['height' => '150', 'width' => '150']) ?>
+				<?= $this->Html->image('users/' . h($profile[0]->image_name) , ['height' => '100%', 'width' => '100%']) ?>
 				<br>
 				<br>
 				<p style="color: #000"><b>Name:</b> <?= h($profile[0]->first_name) . ' ' . h($profile[0]->last_name) ?></p>
 				<p style="color: #000"><b>School:</b> <?= h($profile[0]->school) ?></p>
 				<p style="color: #000"><b>About Me:</b> <?= h($profile[0]->about_me) ?> </p>
-				<?= $this->Html->link('Edit Profile',
+				<?= $this->Html->link('Edit Profile Info',
 										array('controller'=>'profiles','action'=>'edit', $owner->id),
 										array('escape'=>false, 'class'=>'btn btn-primary', 'ng-if'=> ($isOwner ? 'true' : 'false'))); ?>
 			</div>
