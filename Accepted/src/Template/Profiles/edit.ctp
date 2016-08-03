@@ -31,6 +31,7 @@
             <div class="col-xs-9">
                 <?php echo $this->Html->image('users/' . h($profile[0]->image_name), ['alt' => 'placeholder', 'id'=>'image', 'width'=>'100%']);?>
                 <input type="file" id="upload" name="upload" accept="image/*" onchange="srcChange()">
+                <br>
             </div>
             <div class="col-xs-9">
                 <?php echo $this->Form->submit('Submit Edits', array('class'=>'btn btn-primary'))?>
