@@ -104,6 +104,12 @@ body {
     border-radius: 4px;
 }
 
+.textleft{
+    text-align: left;
+    font-size: 20px;
+    color: black;
+}
+
 table, td, tr{
     border: 4px solid #7F171F;
     background-color: #EFE0B9;
@@ -222,6 +228,12 @@ p3{
     color: black;
     font-size: 20px;
     text-align: center;
+}
+
+p4{
+    color: black;
+    font-size: 20px;
+    text-align: left;
 }
 h2{
     color: black;
