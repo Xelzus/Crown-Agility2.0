@@ -18,6 +18,15 @@
                 <li class="textleft" ng-repeat="tip in model.content" ng-bind-html="tip.item"></li>
                 </ul>
             </div>
+            <div class="col-sm-2 left">
+            
+            </div>
+            <div class="col-sm-4 left">
+            <img src="img/runner.png" class="align-left2" />
+            </div>
+            <div class="col-sm-4 left">
+            <img src="img/runner1.svg" class="align-left3" />
+            </div>
         </section>
     </div>
     <?= $this->Html->script('tips/tipsCtrl.js') . "\n" ?>
