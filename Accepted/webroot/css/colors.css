@@ -44,13 +44,10 @@ body
     width = 300px;
 }
 .center1{
-    margin: auto;
     border-radius: 10px;
     border: 6px solid  #7F171F;
     padding: 8px;
     background-color:  #EFE0B9;
-    width: 500px;
-    height: 400px;
     text-align: center;
 }
 

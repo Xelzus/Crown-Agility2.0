@@ -9,14 +9,33 @@
     <br>
     <p3>Do you ever find yourself having trouble with your money management?</p3>
     <br>
-    <p3>Well, luckily for you, you can create a budget for yourself using this tool!</p3>
+    <p3>
+		Well, luckily for you, you can create a budget for yourself using this
+		tool!
+	</p3>
+	<br>
+	<br>
+	<p3>
+		Create a title for the budget, type in an initial amount, set it with the "Set" button
+		and then add your expenditures. Your balance will auto-update as you add
+		more items.
+	</p3>
+	<br>
+    <p3>
+		Once you are done, you can hit the "Create Budget Summary" button and a
+		new button will appear that will allow you to download a summary of what
+		you entered into the form that you can keep for your records.
+	</p3>
+
+    <br>
+	<p3>Refresh the page if you'd like to start over.</p3>
 
     <hr>
 	<div class="row">
 		<div class="col-xs-3">
 		</div>
 		<div class="well alert1 alert1-info col-xs-6">
-		    <form role="form">
+		    <form name="budgetForm" role="form">
 		        <div class="form-group">
 		            <label class="sidetitle2" for="total">Title</label>
 		            <input ng-model="model.title" class="form-control" type="text" id="total" placeholder="Enter title for this budget" >

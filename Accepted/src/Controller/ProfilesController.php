@@ -143,15 +143,6 @@ class ProfilesController extends AppController
 
         $reminders = $user['reminders'];
 
-        /*for ($i = 0; $i < 2; $i++)
-        {
-            $reminders[] = (object) [
-              'title' => 'title' . ($i + 1),
-              'description' => 'description' . ($i + 1),
-              'remindOn' => Time::now()
-            ];
-        }*/
-
         $this->set('reminders', $reminders);
         $this->set('_serialize', ['reminders']);
     }

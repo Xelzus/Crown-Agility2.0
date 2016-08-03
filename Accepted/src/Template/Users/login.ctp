@@ -115,6 +115,7 @@ $title = 'Forward';
                               <a class="btn btn-lg btn-primary" href="users/register">Register</a>
                         </div>
                     </div>
+                    <?= $this->Flash->render() ?>
                 <?php echo $this->Form->end();?>
                 </div>
             </div>

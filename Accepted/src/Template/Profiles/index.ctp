@@ -26,18 +26,22 @@
                 <hr>
                 <div class="text-left">
                     <!--Reminders-->
+					<form name="newReminderForm">
                         <div class="form-group alert2 alert2-info" id="addReminderForm">
                             <p class = "sidetitle2">New Reminder</p>
                             <div>
-                                <input type="text" ng-model="model.newReminder.title" class="form-control" placeholder="Title">
+                                <input name="title" type="text" required="" ng-model="model.newReminder.title" class="form-control" placeholder="Title">
+								<span ng-show="newReminderForm.title.$invalid" style="color:red; font-size:80%">No title entered!</span>
                                 <br>
                             </div>
                             <div>
-                                <textarea style="resize: none" type="text" ng-model="model.newReminder.description" placeholder="Description" class="form-control" rows='1'></textarea>
+                                <textarea name="description" required="" style="resize: none" type="text" ng-model="model.newReminder.description" placeholder="Description" class="form-control" rows='1'></textarea>
+								<span ng-show="newReminderForm.description.$invalid" style="color:red; font-size:80%">No description entered!</span>
                                 <br>
                             </div>
                             <div>
-                                <input type="text" ng-model="model.newReminder.remindOn" class="form-control" placeholder="Remind me on">
+                                <input name="date" type="text" ng-model="model.newReminder.remindOn" class="form-control" placeholder="Remind me on (MM/DD/YY)" ng-pattern="/^(?:(?:(?:0?[13578]|1[02])(\/|-|\.)31)\1|(?:(?:0?[1,3-9]|1[0-2])(\/|-|\.)(?:29|30)\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:0?2(\/|-|\.)29\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:(?:0?[1-9])|(?:1[0-2]))(\/|-|\.)(?:0?[1-9]|1\d|2[0-8])\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$/">
+								<span ng-show="newReminderForm.date.$invalid" style="color:red; font-size:80%">Date not in correct format!</span>
                                 <br>
                             </div>
                             <div>
@@ -45,6 +49,7 @@
                                 <br>
                             </div>
                         </div>
+					</form>
 
                 </div>
                 <div ng-if=<?= '"' . h($isOwner) . '"'  ?>>
