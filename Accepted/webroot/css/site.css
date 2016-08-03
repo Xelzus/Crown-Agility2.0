@@ -182,6 +182,22 @@ th{
     border-radius: 15px;
     font-size: 17px;
     text-align: left;
+    
+}
+
+.alert5-info {
+    color: #31708f;
+    background-color: #EFE0B9;
+    border-color: #7F171F;
+
+}
+.alert5 {
+    padding: 15px;
+    margin-top: 0px;
+    border: 3px solid #7F171F;
+    border-radius: 15px;
+    font-size: 17px;
+    width: 100%;
 }
 /* Set gray background color and 100% height */
 <style>
@@ -267,6 +283,7 @@ p6{
     font-size: 20px;
     text-align: center;
     font-weight: bolder;
+    margin-left: 20px;
 }
 
 h2{
