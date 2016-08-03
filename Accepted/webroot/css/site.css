@@ -169,6 +169,20 @@ th{
     width: 100%;
 }
 
+.alert4-info {
+    color: #31708f;
+    background-color: #EFE0B9;
+    border-color: #7F171F;
+
+}
+.alert4 {
+    padding: 15px;
+    margin-top: 17px;
+    border: 3px solid #7F171F;
+    border-radius: 15px;
+    font-size: 17px;
+    text-align: left;
+}
 /* Set gray background color and 100% height */
 <style>
     .box {
@@ -230,11 +244,31 @@ p3{
     text-align: center;
 }
 
+p6{
+    color: black;
+    font-size: 20px;
+    text-align: center;
+}
 p4{
     color: black;
     font-size: 20px;
     text-align: left;
 }
+
+p5{
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 20px
+}
+
+p6{
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bolder;
+}
+
 h2{
     color: black;
     text-shadow: 1px 0 2px white;
@@ -373,6 +407,22 @@ img.align-left1 {
                 margin-top: 55px;
 
 }
+
+img.align-left2 {
+                width: 310px;
+				height: 300px;
+                margin: auto;
+
+}
+
+img.align-left3 {
+                width: 300px;
+				height: 290px;
+                margin: auto;
+
+}
+
+
 
 img.align-right {
                 width: 210px;

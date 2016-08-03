@@ -2,19 +2,15 @@
 <?= $this->Html->css('site.css') . "\n" ?>
 </head>
 
-<h1 style="text-align: center">Univerisity Fall 2016 Deadlines</h2>
+<h1 style="text-align: center">Univerisity Fall 2016 Deadlines</h1>
 
 <hr>
 
-<p3>Hey! Class of 2016! You have to stay on top of these college application deadlines!</p3>
-
-<p3>
-    Don't let any of these pass you by! Just choose the state you're interested in
-    and you will be shown all the upcoming deadlines for that state's colleges. If
-    you don't see the school you're interested in, then their deadline for the
-    Fall 2016 semester may have already passed or we may not have info on the school.
-    If that is the case, we apologize for the inconvienience.
-</p3>
+<p6>Hey! Class of 2016! You have to stay on top of these college application deadlines!</p6>
+<p6>Don't let any of these pass you by!</p6>
+<br>
+<br>
+<p6>Just choose the state you're interested in and you will be shown all the upcoming deadlines for that state's colleges. If you don't see the school you're interested in, then their deadline for the Fall 2016 semester may have already passed or we may not have info on the school. If that is the case, we apologize for the inconvienience. </p6>
 
 <hr>
 
