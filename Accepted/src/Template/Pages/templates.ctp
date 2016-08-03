@@ -51,7 +51,7 @@
                How to build it?
             </p>
             <p id = text>
-                While the content of your resume is most important, the <b><u>format</u></b> is what helps the content get noticed. Studies show that recruiters and hiring managers usually spend an average of just 6 seconds looking at a resume. Good formatting ensures it will be easy for recruiters to find all the information they need. Also, you want to <b><u>attract the attention of the recruiter</u></b> right away in the first two paragraphs, that way the recruiter will keep reading your resume trying to find out more about you.
+                While the content of your resume is most important, the <b><u>format</u></b> is what helps to get the content noticed. Studies show that recruiters and hiring managers usually spend an average of just 6 seconds looking at a resume. Good formatting ensures it will be easy for recruiters to find all the information they need. Also, you want to <b><u>attract the attention of the recruiter</u></b> right away in the first two paragraphs, that way the recruiter will keep reading your resume trying to find out more about you.
             </p>
         <br>
 
