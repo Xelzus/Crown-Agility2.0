@@ -9,7 +9,7 @@
 	<div class="row">
 		<div ng-class=<?= '"' . h($isOwner) . ' ? \'col-xs-4\' : \'col-xs-12\'"'  ?>>
 			<div class="well alert1 alert1-info">
-				<?= $this->Html->image('users/' . h($profile[0]->image_name) , ['height' => '100%', 'width' => '100%']) ?>
+				<?= $this->Html->image('users/' . h($profile[0]->image_name) , ['height' => '200', 'width' => '200']) ?>
 				<br>
 				<br>
 				<p style="color: #000"><b>Name:</b> <?= h($profile[0]->first_name) . ' ' . h($profile[0]->last_name) ?></p>

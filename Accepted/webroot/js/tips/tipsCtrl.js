@@ -17,9 +17,6 @@ app.controller("tipsCtrl", function ($scope, $sce) {
                     , {
                         item: $sce.trustAsHtml("<strong>Drink water</strong>. Drinking enough water can help boost your concentration as well as keep you from overeating. Make sure to keep hydrated as you go through your day by bringing water with you.")
                     }
-                    , {
-                        item: $sce.trustAsHtml("<strong>Bring a friend</strong>. With someone else relying on you showing up, you'll be much more likely to make the effort to work out. Plus, working out with a friend can be a great way to make working out more fun")
-                    }
 
                 ]
             },
@@ -28,7 +25,7 @@ app.controller("tipsCtrl", function ($scope, $sce) {
                     {
                         item: $sce.trustAsHtml("<strong>Play a sport</strong>. One way to get yourself motivated to exercise is to make it a game by playing a sport. Join an intramural team or play recreational sports through your school to get active and have fun at the same time.")
                     },
-                    
+
                     {
                         item: $sce.trustAsHtml("<strong>Head to the gym</strong>. Most schools provide students with gym facilities they can take advantage of for free. Head to the gym between classes or when you get up in the morning to squeeze in a workout.")
                     },
@@ -41,7 +38,7 @@ app.controller("tipsCtrl", function ($scope, $sce) {
                     {
                         item: $sce.trustAsHtml("<strong>Take advantage of open spaces.</strong> Most colleges are equipped with large grassy quads or arboretums with trails you can walk on. Take advantage of these spaces to take hikes, play frisbee or just walk around.")
                     }
-                    
+
                 ]
             },
             {
@@ -49,7 +46,7 @@ app.controller("tipsCtrl", function ($scope, $sce) {
                     {
                         item: $sce.trustAsHtml("<strong>Create a routine</strong>. If you get yourself in the habit of studying, working out, and sleeping at certain hours, it will be easier to fit in all the things you need to do in a day without feeling too stressed out.")
                     },
-                    
+
                     {
                         item: $sce.trustAsHtml("<strong>Give yourself a break</strong>. If you've been working steadily for hours, give your eyes and mind a chance for a rest by taking a break. You can come back feeling more refreshed and ready to go.")
                     },

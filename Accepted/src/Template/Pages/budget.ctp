@@ -4,56 +4,37 @@
 <div ng-controller="budgetCtrl">
     <h1>Budget Planning</h1>
     <hr>
-<div></div>
-<div class="col-sm-6 alert4 alert4-info">
-    <p5 class= "sidetitle3">Welcome to Accepted's budget planner!</p5>
+
+	<div class="box alert5 alert5-info">
+
+	<p5>Welcome to Accepted's budget planner!</p5>
     <br>
     <p5>Do you ever find yourself having trouble with your money management?</p5>
     <br>
-<<<<<<< HEAD
-    <p3>
+    <p5>
 		Well, luckily for you, you can create a budget for yourself using this
 		tool!
-	</p3>
+	</p5>
 	<br>
 	<br>
-	<p3>
+	<p5>
 		Create a title for the budget, type in an initial amount, set it with the "Set" button
 		and then add your expenditures. Your balance will auto-update as you add
 		more items.
-	</p3>
+	</p5>
 	<br>
-    <p3>
+    <p5>
 		Once you are done, you can hit the "Create Budget Summary" button and a
 		new button will appear that will allow you to download a summary of what
 		you entered into the form that you can keep for your records.
-	</p3>
+	</p5>
 
     <br>
-	<p3>Refresh the page if you'd like to start over.</p3>
+	<p5>Refresh the page if you'd like to start over.</p5>
+	</div>
 
-    <hr>
-=======
-    <p5>Well, luckily for you, you can create a budget for yourself using this tool! Creating the budget summary will create a file with the title, money spent, item name, and money left.</p5>
-    <p5></p5>
-</div>
-<div class="col-sm-6 alert4 alert4-info">
-    <p5>A budget done correctly is the most precise tool for analysing your finances imaginable. It answers two key questions...</p5>
-    <br>
-    <ul>
-        <li>
-        <p5><b>Do I spend more than I earn?</b></p5>
-        </li>
-        <br>
-        <li><p5><b> What can I afford to spend?</b></p5>
-        </li>
-    </ul>
-    <br>
-</div>
-    <div class="col-sm-12">
-    <hr></div>
-    
->>>>>>> origin/master
+	<hr>
+
 	<div class="row">
 		<div class="col-xs-3">
 		</div>

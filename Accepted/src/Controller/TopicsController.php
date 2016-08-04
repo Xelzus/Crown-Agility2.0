@@ -63,7 +63,7 @@ class TopicsController extends AppController
             if ($this->Topics->save($topic))
 			{
                 $this->Flash->success(__('Topic has been created'));
-                $this->redirect('/');
+                return $this->redirect(['controller' => 'forums', 'action' => 'index']);
             }
 			else
 			{

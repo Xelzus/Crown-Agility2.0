@@ -66,7 +66,7 @@
                             ?>
                         </p>
                         <?php $hash = md5($post['user']['email']);?>
-                        <?= $this->Html->image('users/' . $post['user']['profile']['image_name'] , ['height' => '100%', 'width' => '100%']) ?>
+                        <?= $this->Html->image('users/' . $post['user']['profile']['image_name'] , ['height' => '100', 'width' => '100']) ?>
                     </td>
                     <td>
                         <p2>
